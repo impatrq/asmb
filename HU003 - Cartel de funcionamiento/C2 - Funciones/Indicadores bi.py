@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 from time import sleep
 
-PINCARTEL = 0   # Pin del indicador de funcionamiento
+PINCARTEL = 0   # Pin del indicador de funcionamiento, a definir
 
 GPIO.setup(PINCARTEL, GPIO.OUT)
 

@@ -20,4 +20,3 @@ for first, last, email, birth in personas:
     cursor.execute(cmd)
     connection.commit()
 
-
