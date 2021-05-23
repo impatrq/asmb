@@ -31,6 +31,14 @@ horarios = [(('08:15:00-16:30:00'),('08:15:00-16:30:00'),('08:15:00-16:30:00'),(
             (('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00')),
             (('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'))]
 
+
+cmd = """CREATE TABLE IF NOT EXISTS Sensores(
+         date DATE NOT NULL,
+         time TIME NOT NULL,
+         estados TEXT NOT NULL
+     )"""
+cursor.execute(cmd)
+
 cmd = """CREATE TABLE IF NOT EXISTS Empleados(
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         workschedule INTEGER NOT NULL,
@@ -54,12 +62,14 @@ cursor.execute(cmd)
 
 cmd = """CREATE TABLE IF NOT EXISTS Entradas(
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-        empleadoid INTEGER NOT NULL,
+        employeeid INTEGER NOT NULL,
         day DATE NOT NULL,
         checkin TIME NOT NULL,
-        pretendedcheckin TIME DEFAULT NULL
+        pretendedcheckin TIME DEFAULT NULL,
+        temperature INTEGER NOT NULL
     )"""
 cursor.execute(cmd)
+
 
 for id, group, name, birth, email in nombres:
     cmd = f"""INSERT INTO Empleados ('id','workschedule','name','birth','email') VALUES ('{id}','{group}','{name}','{birth}','{email}')"""

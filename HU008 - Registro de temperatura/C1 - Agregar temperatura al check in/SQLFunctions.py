@@ -28,16 +28,10 @@ def getSchedule(id):
     #print(f"\n\t Bienvenido empleado {id} tu horario hoy es de: {horario}")
     return horario
 
-def logCheckIn(empleadoid):
-    cmd = f"""INSERT INTO Entradas (empleadoid,day,checkin,pretendedcheckin) 
-            VALUES ('{empleadoid}','{getDay()}','{getTime()}','{getSchedule(empleadoid)}')"""
+def logCheckIn(employeeid, temperatura):
+    cmd = f"""INSERT INTO Entradas (employeeid, day,checkin, pretendedcheckin, temperature) 
+            VALUES ('{employeeid}','{getDay()}','{getTime()}','{getSchedule(employeeid)}','{temperatura}')"""
     cursor.execute(cmd)
     connection.commit()
 
-def logSensors(sensorStatus):
-    assert len(sensorStatus)==8, 'La lista ingresada debe contener 8 valores'
-
-    cmd = f"""INSERT INTO Sensores (date, time, estados) VALUES ('{getDay()}', '{getTime()}', '{sensorStatus}')"""
-    cursor.execute(cmd)
-    connection.commit()
-
+logCheckIn(3,20)
