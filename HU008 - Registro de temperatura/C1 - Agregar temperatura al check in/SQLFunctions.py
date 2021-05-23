@@ -33,5 +33,3 @@ def logCheckIn(employeeid, temperatura):
             VALUES ('{employeeid}','{getDay()}','{getTime()}','{getSchedule(employeeid)}','{temperatura}')"""
     cursor.execute(cmd)
     connection.commit()
-
-logCheckIn(3,20)
