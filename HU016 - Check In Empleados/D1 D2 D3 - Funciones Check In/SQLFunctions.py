@@ -25,7 +25,7 @@ def getSchedule(id):
     cursor.execute(cmd)
     horario = cursor.fetchone()[0]
 
-    #print(f"\n\t Bienvenido empleado {id} tu horario hoy es de: {horario}")
+    #print(f"\n\t Bienvenido empleado {id} tu horario del dia es de: {horario}")
     return horario
 
 def logCheckIn(empleadoid):
@@ -34,5 +34,3 @@ def logCheckIn(empleadoid):
     cursor.execute(cmd)
     connection.commit()
 
-
-logCheckIn(3)
