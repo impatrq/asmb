@@ -3,6 +3,7 @@ import sqlite3
 connection = sqlite3.connect('Cabina.db')
 cursor = connection.cursor()
 
+# Unas listas con info que se usarán mas adelante
 
 nombres =  [(1,6,"David Mcmillan","09-09-14","lorem.ipsum@Nullam.ca"),(2,10,"Cadman Coffey","02-09-16","tempor.est.ac@fringillaest.edu"),(3,10,"Baker Moreno","17-08-01","per@Nunclectus.com"),(4,11,"Martina Waters","07-06-70","sodales.Mauris.blandit@egetmetusIn.co.uk"),(5,4,"Shannon G. Wright","24-08-62","Cras.vulputate.velit@DonectinciduntDonec.co.uk"),(6,3,"Madaline Jackson","25-01-12","nunc@infelis.ca"),(7,11,"Shelley Livingston","25-07-10","Nullam@aliquetmolestie.net"),(8,6,"Dylan Ingram","24-11-97","tristique.pellentesque.tellus@amet.net"),(9,11,"Valentine I. Prince","29-05-79","Quisque@hymenaeos.co.uk"),(10,6,"Hilary Hampton","28-05-13","aliquet.libero.Integer@Donecnon.ca"),
             (11,3,"Selma V. Anthony","03-04-01","Cras.dolor@nec.com"),(12,14,"Jamal Farmer","29-08-92","ornare@temporarcuVestibulum.edu"),(13,15,"Macaulay Palmer","24-08-79","ipsum@sitamet.co.uk"),(14,12,"Alan K. Britt","13-11-70","velit@etnuncQuisque.org"),(15,10,"Wang N. Cole","14-03-96","tempus.lorem@Sedpharetra.co.uk"),(16,4,"Tatum U. Haney","16-03-89","ridiculus.mus.Proin@egetmetus.co.uk"),(17,5,"Barbara I. Peck","26-11-71","ornare@vitaealiquet.co.uk"),(18,1,"Seth L. Swanson","02-09-64","gravida.sagittis@metusAeneansed.edu"),(19,10,"Jameson Mccall","23-10-19","ligula.Aenean.euismod@etultrices.org"),(20,11,"Quincy Roth","30-07-83","dignissim@egestasascelerisque.org"),
@@ -31,6 +32,7 @@ horarios = [(('08:15:00-16:30:00'),('08:15:00-16:30:00'),('08:15:00-16:30:00'),(
             (('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00'),('23:50:00-05:30:00')),
             (('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'),('00:00:00-04:50:00'))]
 
+# Esto crea las tablas de la base de datos
 
 cmd = """CREATE TABLE IF NOT EXISTS Sensores(
          date DATE NOT NULL,
@@ -60,7 +62,7 @@ cmd = """CREATE TABLE IF NOT EXISTS Horarios(
      )"""
 cursor.execute(cmd)
 
-cmd = """CREATE TABLE IF NOT EXISTS Entradas(
+cmd = """CREATE TABLE IF NOT EXISTS EntradasEmpleados(
         id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
         employeeid INTEGER NOT NULL,
         day DATE NOT NULL,
@@ -70,6 +72,15 @@ cmd = """CREATE TABLE IF NOT EXISTS Entradas(
     )"""
 cursor.execute(cmd)
 
+cmd = """CREATE TABLE IF NOT EXISTS EntradasClientes(
+        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        day DATE NOT NULL,
+        time TIME NOT NULL,
+        temperature INTEGER NOT NULL
+    )"""
+cursor.execute(cmd)
+
+# Esto se encarga de cargar datos a la base de datos 
 
 for id, group, name, birth, email in nombres:
     cmd = f"""INSERT INTO Empleados ('id','workschedule','name','birth','email') VALUES ('{id}','{group}','{name}','{birth}','{email}')"""
