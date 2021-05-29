@@ -34,8 +34,10 @@ def getSchedule(id):
 
 
 def logSensors(sensorStatus):
+    if type(sensorStatus) != tuple and type(sensorStatus) != list:
+        raise TypeError("El parametro ingresado debe ser una lista/tupla")
     if not len(sensorStatus)==8:
-        raise TypeError("La lista ingresada debe contener 8 valores")
+        raise TypeError("El array ingresado debe contener 8 valores")
 
     cmd = f"""INSERT INTO Sensores (date, time, estados) VALUES ('{getDay()}', '{getTime()}', '{sensorStatus}')"""
     cursor.execute(cmd)
@@ -43,12 +45,12 @@ def logSensors(sensorStatus):
 
 
 def logEmployee(empleadoid, temp):
-    if type(id) != str:
-        raise TypeError("La funcion toma como primer parametro un string ")
+    if type(empleadoid) != int:
+        raise TypeError("La funcion toma como primer parametro un entero positivo")
     if type(temp) != int:
         raise TypeError("La funcion toma como segundo parametro un entero positivo")
 
-    cmd = f"""INSERT INTO EntradasEmpleados (empleadoid, day, checkin, pretendedcheckin, temperature) 
+    cmd = f"""INSERT INTO EntradasEmpleados (employeeid, day, checkin, pretendedcheckin, temperature) 
             VALUES ('{empleadoid}','{getDay()}','{getTime()}','{getSchedule(empleadoid)}','{temp}')"""
     cursor.execute(cmd)
     connection.commit()
@@ -60,4 +62,3 @@ def logClient(temp):
     cmd = f"""INSERT INTO EntradasClientes (day, time, temperature) VALUES ('{getDay()}','{getTime()}','{temp}')"""
     cursor.execute(cmd)
     connection.commit()
-
