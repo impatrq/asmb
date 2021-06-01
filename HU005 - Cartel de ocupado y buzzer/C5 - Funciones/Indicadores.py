@@ -11,7 +11,7 @@ def desocupar():
     return False       # A definir
 
 def ocupar():
-    GPIO.output(PINESCARTEL[1], 1)
+    GPIO.output(PINESCARTEL[0], 1)
     GPIO.output(PINESCARTEL[1], 0)
     return True        # A definir
 
