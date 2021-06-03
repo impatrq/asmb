@@ -5,8 +5,8 @@
 
 1 Sck
 
-1 Mosi
-
 1 Miso
+
+1 Irq
 
 
