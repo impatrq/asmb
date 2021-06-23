@@ -25,3 +25,4 @@ Proyecto de 7mo Año de la Escuela EEST N7 TRQ
 * [Numero 7](https://docs.google.com/document/d/1HMkjGyC2qab5WeuxTljDNFJyogPWixypNVS3iUwOfi4/edit)  
 * [Numero 8](https://docs.google.com/document/d/1qp6OVcNjNDc6ESG3M3FEdfnKejqKzGu85QJH8a0bdiE/edit)
 * [Numero 9](https://docs.google.com/document/d/1tMuqNxIj3RjBa2gOgdUN-t-b4i-DhyNBBJgICMQvAsI/edit#heading=h.h71roo2449rv)
+* [Numero 10](https://docs.google.com/document/d/1AkDY9smrYE4cBNo1F4DwCtP-yqBBLF-RQazNz6R8zXU/edit#)
