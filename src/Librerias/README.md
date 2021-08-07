@@ -1,6 +1,8 @@
 # TODO (en libs)
 
-- [ ] Implementar con otra libreria los indicadores y sonidos del RP4 
-- [ ] Unir las dos librerias de indicadores
+- [x] Corregir el desorden de estas librerias
+- [x] Documentar todas las funciones
+- [x] Fusionar todas las librerias  
+- [ ] ...
 - [ ] Llenar esta lista
  

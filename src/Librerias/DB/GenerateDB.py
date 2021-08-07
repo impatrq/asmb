@@ -63,7 +63,7 @@ cmd = """CREATE TABLE IF NOT EXISTS Horarios(
 cursor.execute(cmd)
 
 cmd = """CREATE TABLE IF NOT EXISTS EntradasEmpleados(
-        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        id INTEGER AUTOINCREMENT NOT NULL,
         employeeid INTEGER NOT NULL,
         day DATE NOT NULL,
         checkin TIME NOT NULL,
@@ -73,7 +73,7 @@ cmd = """CREATE TABLE IF NOT EXISTS EntradasEmpleados(
 cursor.execute(cmd)
 
 cmd = """CREATE TABLE IF NOT EXISTS EntradasClientes(
-        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+        id INTEGER AUTOINCREMENT NOT NULL,
         day DATE NOT NULL,
         time TIME NOT NULL,
         temperature INTEGER NOT NULL
