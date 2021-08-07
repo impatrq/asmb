@@ -5,8 +5,8 @@
     │
     ├── Librerias/
     │    ├── DB/
-    │    ├── Fuera de uso/
-    │    │    └── Libreria fuera de uso.py
+    │    ├── Recursos/
+    │    │    └── Db.db
     │    ├── Libreria x.py
     │    └── ...
     ├── Pruebas/
