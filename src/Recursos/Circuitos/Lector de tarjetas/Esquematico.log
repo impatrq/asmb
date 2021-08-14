@@ -1,4 +1,4 @@
-# Writing all output to: C:\Users\Juan I. Casareski\Desktop\D2 - Esquematico\Esquematico.log
+# Writing all output to: C:\Users\Juan I. Casareski\Desktop\Automatic-Sanitary-Modular-Booth\src\Recursos\Circuitos\Lector de tarjetas\Esquematico.log
 set pad_wire_necking on
 bus diagonal
 fanout 20

@@ -1,14 +1,14 @@
 (PCB Esquematico
  (parser
   (host_cad ARES)
-  (host_version 8.11 SP0)
+  (host_version 8.12 SP0)
  )
  (resolution mm 100000)
  (unit mm)
  (structure
-  (boundary (rect pcb -51.60160 45.09840 -26.19840 70.50160))
-  (boundary (path signal 0.20320 -51.50000 45.20000 -26.30000 45.20000 -26.30000 70.40000
-   -51.50000 70.40000 -51.50000 45.20000))
+  (boundary (rect pcb -60.30160 29.69840 -13.99840 77.70160))
+  (boundary (path signal 0.20320 -60.20000 29.80000 -14.10000 29.80000 -14.10000 77.60000
+   -60.20000 77.60000 -60.20000 29.80000))
   (flip_style mirror_first)
   (layer TOP (type signal) (direction off))
   (layer I1 (type signal) (direction off))
@@ -50,27 +50,43 @@
   )
  )
  (placement
-  (component "TBLOCK-I2_J1" (place J1 -34.67000 65.58000 front 270))
-  (component "TBLOCK-I2_J2" (place J2 -34.67000 54.71000 front 270))
-  (component "CONN-SIL4_J3" (place J3 -48.08000 61.36000 front 270))
+  (component "TBLOCK-I2_J3" (place J3 -33.01000 73.32000 front 270))
+  (component "CONN-SIL4_J1" (place J1 -49.04000 63.39000 front 270))
+  (component "CONN-SIL4_J2" (place J2 -49.07000 53.18000 front 270))
+  (component "TBLOCK-I3_J4" (place J4 -33.05000 61.79000 front 270))
+  (component "TBLOCK-I3_J5" (place J5 -33.05000 46.05000 front 270))
  )
  (library
-  (image "TBLOCK-I2_J1" (side front)
+  (image "TBLOCK-I2_J3" (side front)
    (outline (rect TOP -2.64160 -5.18160 7.72160 5.18160))
    (pin PS0 (rotate 0) 0 0.00000 0.00000)
    (pin PS0 (rotate 0) 1 5.08000 0.00000)
   )
-  (image "TBLOCK-I2_J2" (side front)
-   (outline (rect TOP -2.64160 -5.18160 7.72160 5.18160))
-   (pin PS0 (rotate 0) 0 0.00000 0.00000)
-   (pin PS0 (rotate 0) 1 5.08000 0.00000)
-  )
-  (image "CONN-SIL4_J3" (side front)
+  (image "CONN-SIL4_J1" (side front)
    (outline (rect TOP -1.37160 -1.37160 8.99160 1.37160))
    (pin PS1 (rotate 0) 0 0.00000 0.00000)
    (pin PS1 (rotate 0) 1 2.54000 0.00000)
    (pin PS1 (rotate 0) 2 5.08000 0.00000)
    (pin PS1 (rotate 0) 3 7.62000 0.00000)
+  )
+  (image "CONN-SIL4_J2" (side front)
+   (outline (rect TOP -1.37160 -1.37160 8.99160 1.37160))
+   (pin PS1 (rotate 0) 0 0.00000 0.00000)
+   (pin PS1 (rotate 0) 1 2.54000 0.00000)
+   (pin PS1 (rotate 0) 2 5.08000 0.00000)
+   (pin PS1 (rotate 0) 3 7.62000 0.00000)
+  )
+  (image "TBLOCK-I3_J4" (side front)
+   (outline (rect TOP -2.64160 -5.18160 12.80160 5.18160))
+   (pin PS0 (rotate 0) 0 0.00000 0.00000)
+   (pin PS0 (rotate 0) 1 5.08000 0.00000)
+   (pin PS0 (rotate 0) 2 10.16000 0.00000)
+  )
+  (image "TBLOCK-I3_J5" (side front)
+   (outline (rect TOP -2.64160 -5.18160 12.80160 5.18160))
+   (pin PS0 (rotate 0) 0 0.00000 0.00000)
+   (pin PS0 (rotate 0) 1 5.08000 0.00000)
+   (pin PS0 (rotate 0) 2 10.16000 0.00000)
   )
   (padstack PS0 (absolute on)
    (shape (rect TOP -1.77800 -4.31800 1.77800 4.31800))
@@ -135,7 +151,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-0 J3-0)
+   (pins J3-0 J1-0)
   )
   (net "#00001"
    (circuit
@@ -144,7 +160,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J1-1 J3-1)
+   (pins J1-1 J4-0)
   )
   (net "#00002"
    (circuit
@@ -153,7 +169,7 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-0 J3-2)
+   (pins J3-1 J1-2)
   )
   (net "#00003"
    (circuit
@@ -162,13 +178,53 @@
      $VIA#0_SIGNAL
     )
    )
-   (pins J2-1 J3-3)
+   (pins J1-3 J4-1)
+  )
+  (net "#00004"
+   (circuit
+    (use_layer BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins J2-0 J4-2)
+  )
+  (net "#00005"
+   (circuit
+    (use_layer BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins J2-1 J5-0)
+  )
+  (net "#00006"
+   (circuit
+    (use_layer BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins J2-2 J5-1)
+  )
+  (net "#00007"
+   (circuit
+    (use_layer BOT)
+    (use_via
+     $VIA#0_SIGNAL
+    )
+   )
+   (pins J2-3 J5-2)
   )
   (class SIGNAL
    "#00000"
    "#00001"
    "#00002"
    "#00003"
+   "#00004"
+   "#00005"
+   "#00006"
+   "#00007"
    "{NC}"
    "{VOID}"
    (rule
