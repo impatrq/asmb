@@ -1,0 +1,10 @@
+# Writing all output to: D:\COSAS\Panel de estado\Circuito y PCB.log
+set pad_wire_necking on
+bus diagonal
+fanout 20
+route 100
+clean 10
+filter 5
+recorner diagonal
+status_file
+
