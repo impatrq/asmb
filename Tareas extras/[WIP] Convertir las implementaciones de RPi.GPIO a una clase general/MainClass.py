@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import busio as io
 import board
 from time import sleep
-
+from SQLFunctions import logSensors
 
 enUso:bool = False
 enFuncionamiento:bool = True
@@ -57,6 +57,13 @@ class ASMB:
                 state = GPIO.input(self.__pin)
                 return state
             raise Exception(f'Modo del pin {self.__pin}:{self.__mode}')
+
+        def push(self, state):
+            if self.__mode == 'output':
+                    GPIO.output(self.__pin, state)
+                    GPIO.output(self.__pin, not state)
+            else:
+                raise Exception(f'Modo del pin {self.__pin}:{self.__mode}')
 
     class IO:       # Revisar nombre
         def __init__(self, entrada, salida, led) -> None:
@@ -114,4 +121,38 @@ class ASMB:
                     return True, temp 
                 sleep(0.25)
             return False, temp
+    class PanelEstado:
+        def __init__(self, testPin, sh_cp, ds, st_cp, pinEntrada, pinAlcohol, pinSalida) -> None:
+            self.testPin:ASMB.Pin = testPin
+            self.sh_cp:ASMB.Pin = sh_cp
+            self.ds:ASMB.Pin = ds
+            self.st_cp:ASMB.Pin = st_cp
 
+            self.pinEntrada:ASMB.Pin = pinEntrada
+            self.pinAlcohol:ASMB.Pin = pinAlcohol
+            self.pinSalida:ASMB.Pin = pinSalida
+            
+        def logSensors(self, states:tuple) -> None:
+            registerRefreshPin = self.sh_cp
+            serialOut = self.ds
+            outputRefreshPin = self.st_cp
+            for e in states:    
+                serialOut.setState(e)
+                registerRefreshPin.push(1)
+            outputRefreshPin.push(1)
+            logSensors(states)
+        def getSensorStatus(self,) -> list:
+            estados = [False]*8
+            '''[temperatura, tarjetas, entrada, alcohol, salida, ]'''
+            try:
+                i2c = io.I2C(board.SCL, board.SDA, frequency=100e3)
+                mlx = mlx90614.MLX90614(self.__i2c)
+            except:
+                estados[0] = True
+
+            try:
+                # Poner lo mismo q arriba pero para el lector de tarjetas
+                pass
+            except:
+                estados[1] = True
+            
