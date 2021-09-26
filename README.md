@@ -7,14 +7,13 @@ Proyecto de 7mo Año de la Escuela EEST N7 TRQ
 * El segundo y tercer numero seria el numeor de historia de usuario.
 
 ## Links:
-* [Presupuesto](https://docs.google.com/spreadsheets/d/1yRdK-Eko-lI7sWNFI4KGX0eHRzDyLPdNAgaI6_2Puz0/edit#gid=1138026163) 
 * [Preproyecto](https://docs.google.com/document/d/1FV1TCATaDeYYaNmAFFsy11UKM_EqK5jApIGANrdqngo/edit)
-* [Carpeta de campo](https://docs.google.com/document/d/14BjXpj9pFJPTAwgjcMGalzsc1YWqpey3uLjJZyRDOYk/edit)
 * [Backlog](https://docs.google.com/document/d/16Rr1VwQktRlqgh4Xqv46rgp91BMWeoB3IwLuBnragbY/edit#heading=h.weea1lfqqklc)
-* [Sprint Backlog](https://trello.com/b/mIzg2lCd/kanban)
-* [Sprint Backlog (Objetivos)](https://trello.com/b/1GOEzu2j/backlog)
-* [Diagrama en bloques](https://lucid.app/lucidchart/66ddf08e-15f4-40f1-a414-59db75a2046f/edit?beaconFlowId=EAA92AF8D72C77EE&page=0_0#)
-* [Croquis](https://jamboard.google.com/d/10bxHw2sUzV-YrRQvOjwpjocV1fMJhBMaigYEMrjLV2c/viewer?f=0)
+* [Kanban](https://trello.com/b/mIzg2lCd/kanban)
+* [Presupuesto](https://docs.google.com/spreadsheets/d/1yRdK-Eko-lI7sWNFI4KGX0eHRzDyLPdNAgaI6_2Puz0/edit#gid=1138026163) 
+* [Carpeta de campo](https://docs.google.com/document/d/14BjXpj9pFJPTAwgjcMGalzsc1YWqpey3uLjJZyRDOYk/edit)
+
+
 
 
 ##  Reuniones diarias
