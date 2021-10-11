@@ -2,4 +2,6 @@
 
 Modelo de la parte principal de la cabina, hecho.
 
-Modelo de la parte secudaria, [WIP]
+Modelo de la parte secudaria, hecho.
+
+Paredes, [WIP]
