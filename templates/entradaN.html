@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Checkout example · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="form-validation.css" rel="stylesheet">
+</head>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h1>Entrada de: {{ entrada[0][1] }}</h1>
+            <br> {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entrada %}
+            <div>
+                <h2><b>Id de la Entrada: </b></h2>
+                <h4> * {{ id }}</h4>
+
+                <h2><b>Id del Empleado</b></h2>
+                <h4> * {{ employeeId }}</h4>
+                <br>
+            </div>
+            <div>
+                <h2><b>Horario de {{ "Entrada" if inOut == "In" else "Salida" }} </b></h2>
+                <h4> * {{ time }}</h4>
+
+                <h2><b>Dia de la Entrada: </b></h2>
+                <h4> * {{ day }}</h4>
+
+                <h2><b>{{ "Horario de Entrada Esperado" if inOut == "In" else "Horario de Salida Esperado"}} </b></h2>
+                <h4> * {{ expectedCheckin if inOut == "In" else expectedCheckout }}</h4>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="col">
+            <a>Ey</a>
+        </div>
+
+        <div class="col">
+            Ey
+        </div>
+
+    </div>
+</div>
+
+</html>
