@@ -2,47 +2,15 @@
 <html lang="en">
 
 <head>
-    <!--
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.88.1">
-    <title>Checkout example · Bootstrap v5.1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/checkout/">
-    -->
-
-
-    <!-- Bootstrap core CSS -->
-    <link href="static/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-        
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="form-validation.css" rel="stylesheet">
 </head>
 <br>
 <div class="container">
     <table class="table table-condensed table-hover table-responsive table-bordered">
-        <tr>
+        <tr class="text-center">
             <td>
-                <h5>ID Entrada</h5>
+                <h5>ID</h5>
             </td>
             <td>
                 <h5>Nombre</h5>
@@ -71,22 +39,36 @@
             <td>
                 <h5>Más Info</h5>
             </td>
-
         </tr>
 
-        {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %}
-        <tr>
-            <td>{{ id }}</td>
+        {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %} {% if day == diaActual %}
+        <tr class="success">
+            <td class="text-center">{{ id }}</td>
             <td>{{ name }}</td>
             <td>{{ employeeId }}</td>
+            <td>{{ day }}</td>
             <td>{{ day }}</td>
             <td>{{ time }}</td>
             <td>{{ expectedCheckin }}</td>
             <td>{{ expectedCheckout }}</td>
             <td>{{ temperature }}</td>
             <td>{{ inOut }}</td>
-            <td><button><a href="{{ url_for('entrada', idEntrada=id) }}">ey<a></button></td>
+            <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
         </tr>
-        {% endfor %}
+        {% else %}
+        <tr>
+            <td class="text-center">{{ id }}</td>
+            <td>{{ name }}</td>
+            <td>{{ employeeId }}</td>
+            <td>{{ day }}</td>
+            <td>{{ day }}</td>
+            <td>{{ time }}</td>
+            <td>{{ expectedCheckin }}</td>
+            <td>{{ expectedCheckout }}</td>
+            <td>{{ temperature }}</td>
+            <td>{{ inOut }}</td>
+            <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
+        </tr>
+        {% endif %} {% endfor %}
     </table>
 </div>

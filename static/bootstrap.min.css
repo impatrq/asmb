@@ -9206,8 +9206,8 @@ a.text-dark:hover {
 
 @media print {
     *,
-    ::after,
-    ::before {
+     ::after,
+     ::before {
         text-shadow: none!important;
         box-shadow: none!important
     }
@@ -9268,6 +9268,20 @@ a.text-dark:hover {
     .table-bordered th {
         border: 1px solid #ddd!important
     }
+}
+
+div.outer-div {
+    height: 170px;
+    width: 300px;
+    background-color: lightgray;
+}
+
+div.middle-div {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 
