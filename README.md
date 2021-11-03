@@ -4,7 +4,7 @@
 ### – entrada/\<idEntrada>:
 
 - Textbox para notas, con su correspondiente backend. (db1)
-
+- Logica para conseguir los datos del empeadom, segun la entrada
 
 ### – empleado/\<idEmpleado>:
 
