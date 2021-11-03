@@ -4,7 +4,6 @@
 ### – entrada/\<idEntrada>:
 
 - Textbox para notas, con su correspondiente backend. (db1)
-- Link dinamico
 
 
 ### – empleado/\<idEmpleado>:
