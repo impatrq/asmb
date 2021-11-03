@@ -20,9 +20,10 @@ def entradas():
 def entrada(idEntrada): 
     return render_template("entrada.html", entrada = getInOut(idEntrada), datosEmpleado = getEmployeeData(1))
 
-@app.route("/empleado")  # same q el de arriba
-def empleado():
-    return render_template("empleado.html", entradasEmpleado = getInFrom(1, 40), salidasEmpleado = getOutFrom(1, 40), nombre = getEmployeeName(1))
+@app.route("/empleado/<idEmpleado>")  # same q el de arriba
+def empleado(idEmpleado):
+    n = 20 # numero de entradas que se muestran
+    return render_template("empleado.html", entradasEmpleado = getInFrom(idEmpleado, 20), salidasEmpleado = getOutFrom(idEmpleado, 20), nombre = getEmployeeName(idEmpleado), diaActual = getDay())
 
 
 
