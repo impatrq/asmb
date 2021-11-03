@@ -16,9 +16,9 @@ def index():
 def entradas():
     return render_template("entradas.html", entradas = getAllInOut(), diaActual = getDay())
 
-@app.route("/entrada")  # hacer dinamico
-def entrada(): 
-    return render_template("entrada.html", entrada = getInOut(1), datosEmpleado = getEmployeeData(1))
+@app.route("/entrada/<idEntrada>")
+def entrada(idEntrada): 
+    return render_template("entrada.html", entrada = getInOut(idEntrada), datosEmpleado = getEmployeeData(1))
 
 @app.route("/empleado")  # same q el de arriba
 def empleado():
