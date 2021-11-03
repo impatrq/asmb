@@ -2,13 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    <link href="static/bootstrap.min.css" rel="stylesheet">
 </head>
-<br>
-<div class="container">
-    <table class="table table-condensed table-hover table-responsive table-bordered">
-        <tr class="text-center">
+
+
+<div class="container-fluid my-3 mx-1">
+    <table class="table table-hover table-responsive table-bordered table-condensed ">
+        <tr class="text-center text-center">
             <td>
                 <h5>ID</h5>
             </td>
@@ -25,10 +25,10 @@
                 <h5>Hora</h5>
             </td>
             <td>
-                <h5>Hora de Entrada Esperado</h5>
+                <h5>Hora de Entrada Esperada</h5>
             </td>
             <td>
-                <h5>Hora de Salida Esperado</h5>
+                <h5>Hora de Salida Esperada</h5>
             </td>
             <td>
                 <h5>Temperatura</h5>
@@ -47,7 +47,6 @@
             <td>{{ name }}</td>
             <td>{{ employeeId }}</td>
             <td>{{ day }}</td>
-            <td>{{ day }}</td>
             <td>{{ time }}</td>
             <td>{{ expectedCheckin }}</td>
             <td>{{ expectedCheckout }}</td>
@@ -61,7 +60,6 @@
             <td>{{ name }}</td>
             <td>{{ employeeId }}</td>
             <td>{{ day }}</td>
-            <td>{{ day }}</td>
             <td>{{ time }}</td>
             <td>{{ expectedCheckin }}</td>
             <td>{{ expectedCheckout }}</td>
@@ -70,5 +68,6 @@
             <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
         </tr>
         {% endif %} {% endfor %}
+
     </table>
 </div>
