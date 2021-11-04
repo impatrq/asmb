@@ -9,10 +9,7 @@
 
 <div class="container-fluid my-3 mx-1">
     <table class="table table-hover table-responsive table-bordered table-condensed ">
-        <tr class="text-center text-center">
-            <td>
-                <h5>ID</h5>
-            </td>
+        <th class="text-center text-center">
             <td>
                 <h5>Nombre</h5>
             </td>
@@ -40,7 +37,7 @@
             <td>
                 <h5>Más Info</h5>
             </td>
-        </tr>
+        </th>
 
         {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %} {% if day == diaActual %}
         <tr class="success">
