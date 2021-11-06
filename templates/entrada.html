@@ -9,10 +9,11 @@
 <div class="container-fluid">
     <div class="row m-4">
         <div class="col-12 col-md-8">
-            <h1>Entrada de: {{ entrada[0][1] }}</h1>
-            <br> {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entrada %}
+            {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entrada %}
+            <h1><b>{{ "Entrada" if inOut == "In" else "Salida" }} de: {{ name }}</b></h1>
+            <br>
             <div>
-                <h2><b>Id de la Entrada: </b></h2>
+                <h2><b>Id de la {{ "Entrada" if inOut == "In" else "Salida" }}: </b></h2>
                 <h4> ⇛ {{ id }}</h4>
 
                 <h2><b>Id del Empleado</b></h2>
