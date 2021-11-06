@@ -4,12 +4,10 @@
 ### – entrada/\<idEntrada>:
 
 - Textbox para notas, con su correspondiente backend. (db1)
-- Logica para conseguir los datos del empeadom, segun la entrada
 
 ### – empleado/\<idEmpleado>:
 
 - Ni idea, le faltan cosas en general
-- Link dinamico
 
 ### – entradas/
 
@@ -24,7 +22,15 @@
 
 ### - navbar o base
 
-- Crear una navbar con los links de cada pagina
-- hacerlo un bloque, con los imports del bootstrap
+- Linkear links a las diferentes paginas
+- Hacer boton de cerrar sesion
 
 
+### - estados de cabinas
+
+- Hacer basicamente todo
+
+
+### - pagina de login
+
+- Eso, hacer todo
