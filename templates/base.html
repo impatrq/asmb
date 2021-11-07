@@ -9,25 +9,25 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
 
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Admin system</a>
+        <a class="navbar-brand">Admin system</a>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" href="{{ url_for('index') }}"><img class="mx-2" src="{{ url_for('static', filename='house.svg') }}" style="filter:invert(1); height:20px;">Inicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Entradas</a>
+                    <a class="nav-link active" href="{{ url_for('entradas') }}"><img class="mx-2" src="{{ url_for('static', filename='clock-history.svg') }}" style="filter:invert(1); height:20px;">Entradas</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link">Estados</a>
+                    <a class="nav-link active" href="{{ url_for('entradas') }}"><img class="mx-2" src="{{ url_for('static', filename='binoculars.svg') }}" style="filter:invert(1); height:20px;">Estados</a>
                 </li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-item nav-right">
-                    <a class="nav-link">Cerrar sesion</a>
+                    <a class="nav-link active"><img class="mx-2" src="{{ url_for('static', filename='person-dash.svg') }}" style="filter:invert(1); height:20px;">Cerrar Sesion</a>
                 </li>
             </ul>
         </div>
