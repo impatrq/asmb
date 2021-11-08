@@ -32,10 +32,7 @@ def getNInOut(n):
     cursor.execute("SELECT * FROM EmployeeIO ORDER BY id DESC")
     return cursor.fetchmany(n)
 
-#def insert_picture(conn, picture_file):
-#     with open(picture_file, 'rb') as input_file:
-#        ablob = input_file.read()
-#        sqlite3.Binary(ablob)
-#        conn.execute("INSERT INTO EmployeeIO (Picture) VALUES (?)", (ablob,))
-
+def getInOutFromWatchlist(nombreAdmin, n):
+    cursor.execute(f"SELECT ID, EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut FROM WatchlistIO WHERE AdminName='{nombreAdmin}' ORDER BY id DESC")
+    return cursor.fetchmany(n)
 

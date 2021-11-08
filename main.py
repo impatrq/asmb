@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import CSRFProtect
-from SQLFunctions import getAllInOut, getInOut, getInFrom, getOutFrom, getEmployeeName, getEmployeeData, getNInOut
+from SQLFunctions import getAllInOut, getInOut, getInFrom, getOutFrom, getEmployeeName, getEmployeeData, getNInOut, getInOutFromWatchlist
 from TimeFunctions import getDay
 app = Flask(__name__)
 app.secret_key = 'eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'  
@@ -10,8 +10,9 @@ csrf = CSRFProtect(app)
 
 @app.route("/")
 def index():
+    adminName = "admin"
     n = 5
-    return render_template("index.html", entradas = getNInOut(n))
+    return render_template("index.html", entradas = getNInOut(n), entradasPrioritarias = getInOutFromWatchlist(adminName, n))
     
 @app.route("/entradas")
 def entradas():
