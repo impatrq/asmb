@@ -28,3 +28,23 @@ if False:
                 Position TEXT
                 )"""
         cursor.execute(cmd)
+
+        cmd = """CREATE TABLE IF NOT EXISTS WatchlistIO(
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                EmployeeName TEXT,
+                EmployeeID INTEGER,
+                Date DATE,
+                Time TIME,
+                ExpectedCheckIn TIME,
+                EstimatedCheckOut TIME,
+                Temperature REAL,
+                InOut TEXT,
+                AdminName TEXT
+                )"""
+        cursor.execute(cmd)
+
+        cmd = """CREATE TABLE IF NOT EXISTS Watchlists(
+                AdminName TEXT,
+                EmployeeName TEXT
+                )"""
+        cursor.execute(cmd)
