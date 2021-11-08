@@ -5,7 +5,7 @@ cursor = conn.cursor()
 
 
 def getAllInOut():
-    cursor.execute("SELECT * FROM EmployeeIO ORDER BY ID DESC")
+    cursor.execute("SELECT * FROM EmployeeIO ORDER BY id DESC")
     return cursor.fetchall()
 
 def getInOut(idEntrada):
@@ -27,6 +27,10 @@ def getEmployeeName(idEmpleado):
 def getEmployeeData(idEmpleado):
     cursor.execute(f"SELECT * FROM Employees WHERE id='{idEmpleado}'")
     return cursor.fetchall()
+
+def getNInOut(n):
+    cursor.execute("SELECT * FROM EmployeeIO ORDER BY id DESC")
+    return cursor.fetchmany(n)
 
 #def insert_picture(conn, picture_file):
 #     with open(picture_file, 'rb') as input_file:

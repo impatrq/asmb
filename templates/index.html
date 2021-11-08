@@ -1,0 +1,57 @@
+{% extends "base.html" %} {% block content %}
+
+
+<div class="container-fluid">
+    <div class="row m-1" style="height:950px;">
+        <div class="col bg-dark overflow-auto" style="border-radius: 10px;">
+
+            {% for id, name, _, _, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %}
+                <div class="m-3 bg-secondary bg-opacity-75" style="height:180px; border-radius:10px;">
+                    <div class="text-white p-3">
+                        <h4 class="">{{ "Entrada" if inOut == 'In' else "Salida" }} de: {{ name }}</h4>
+                        <p class="h5">Horario de {{ "Entrada" if inOut == 'In' else "Salida" }}: {{ time }}</p>
+                        <p class="h5">Horario Esperado de {{ "Entrada" if inOut == 'In' else "Salida" }}: {{ expectedCheckin if inOut == 'In' else expectedCheckout }}</p>
+                        <a class="my-2 btn {{ 'btn-success' if time <= expectedCheckin or time >=  expectedCheckout else 'btn-danger' }}" href="{{ url_for('entrada', idEntrada=id) }}">Algun link</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+
+        <div class="col-6">
+            <div class="row">
+                <div class="col" style="height:500px">
+
+                </div>
+                <div class="row m-1 pb-0" style="height:450px;">
+                    <div class="col bg-secondary mx-2" style="border-radius:10px">
+
+                    </div>
+                    <div class="col bg-dark mx-3" style="border-radius:10px">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col bg-secondary" style="border-radius: 10px">
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
