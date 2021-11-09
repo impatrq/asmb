@@ -1,4 +1,5 @@
 import sqlite3
+from sqlite3.dbapi2 import Cursor
 
 conn = sqlite3.connect('EmployeeLogs.db')
 cursor = conn.cursor()
@@ -43,8 +44,12 @@ if False:
                 )"""
         cursor.execute(cmd)
 
-        cmd = """CREATE TABLE IF NOT EXISTS Watchlists(
+        cmd = """CREATE TABLE IF NOT EXISTS AdminChanges(
+                ID INTEGER PRIMARY KEY AUTOINCREMENT,
                 AdminName TEXT,
-                EmployeeID INTEGER
+                Change TEXT,
+                Time TIME,
+                Day DATE
                 )"""
         cursor.execute(cmd)
+

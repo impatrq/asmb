@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <div class="row m-1" style="height:950px;">
-        <div class="col bg-dark overflow-auto" style="border-radius: 10px;">
+        <div class="col bg-dark overflow-auto" style="border-radius: 10px; height:950px;">
             <div class="bg-secondary bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
                 <h3>Entradas Recientes</h3>
             </div>
@@ -24,9 +24,16 @@
 
                 </div>
                 <div class="row m-1 pb-0" style="height:450px;">
-                    <div class="col bg-secondary mx-2" style="border-radius:10px">
+                    <div class="col bg-secondary mx-3" style="border-radius:10px">
                         <div class="bg-dark bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
                             <h3>Cambios de admins</h3>
+                        </div>
+                        <div class="row text-white m-1">
+                            {% for id, adminName, change, time, day in cambiosAdmins %}
+                                <p class="h5">  
+                                    <{{ id }}> {{ adminName }}: {{ change }} 
+                                </p>
+                            {% endfor %}
                         </div>
                     </div>
                     <div class="col bg-dark mx-3" style="border-radius: 10px">
@@ -35,7 +42,7 @@
                         </div>
                         <div class="row text-white m-1">
                             {% for id, first, last, email, num, addr, zip, role in empleadosVigilados %}
-                            <p class="h5"> 
+                            <p class="h5">
                                 {{ id }}: {{ first }} {{ last }} 
                                 <img src="{{ url_for('static', filename='trash-fill.svg') }}" style="filter:invert(1); height:17px;">
                                 <a href="{{ url_for('empleado', idEmpleado=id) }}">
