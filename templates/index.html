@@ -4,7 +4,9 @@
 <div class="container-fluid">
     <div class="row m-1" style="height:950px;">
         <div class="col bg-dark overflow-auto" style="border-radius: 10px;">
-
+            <div class="bg-secondary bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
+                <h3>Entradas Recientes</h3>
+            </div>
             {% for id, name, _, _, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %}
                 <div class="my-3 mx-2 bg-secondary bg-opacity-75 text-white p-3" style="height:180px; border-radius:10px;">
                     <h4 class="">{{ "Entrada" if inOut == 'In' else "Salida" }} de: {{ name }}</h4>
@@ -23,10 +25,26 @@
                 </div>
                 <div class="row m-1 pb-0" style="height:450px;">
                     <div class="col bg-secondary mx-2" style="border-radius:10px">
-
+                        <div class="bg-dark bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
+                            <h3>Cambios de admins</h3>
+                        </div>
                     </div>
-                    <div class="col bg-dark mx-3" style="border-radius:10px">
-                        
+                    <div class="col bg-dark mx-3" style="border-radius: 10px">
+                        <div class="bg-secondary text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top: 7px;">
+                            <h3>Empleados en la watchlist</h3>
+                        </div>
+                        <div class="row text-white m-1">
+                            {% for id, first, last, email, num, addr, zip, role in empleadosVigilados %}
+                            <p class="h5"> 
+                                {{ id }}: {{ first }} {{ last }} 
+                                <img src="{{ url_for('static', filename='trash-fill.svg') }}" style="filter:invert(1); height:17px;">
+                                <a href="{{ url_for('empleado', idEmpleado=id) }}">
+                                    <img src="{{ url_for('static', filename='file-earmark-person-fill.svg') }}" style="filter:invert(1); height:17px;">
+                                </a>
+                            </p>
+                            
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -34,8 +52,11 @@
 
 
         <div class="col bg-secondary" style="border-radius: 10px">
+            <div class="bg-dark bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
+                <h3>Entradas Recientes de la Watchlist</h3>
+            </div>
             {% for id, name, _, _, time, expectedCheckin, expectedCheckout, temperature, inOut in entradasPrioritarias %}
-            <div class="my-4 mx-3 bg-dark bg-opacity-75 p-3 text-white" style="height:180px; border-radius:10px;">
+            <div class="my-3 mx-2 bg-dark bg-opacity-75 text-white p-3" style="height:180px; border-radius:10px;">
                 <h4 class="">{{ "Entrada" if inOut == 'In' else "Salida" }} de: {{ name }}</h4>
                 <p class="h5">Horario de {{ "Entrada" if inOut == 'In' else "Salida" }}: {{ time }}</p>
                 <p class="h5">Horario Esperado de {{ "Entrada" if inOut == 'In' else "Salida" }}: {{ expectedCheckin if inOut == 'In' else expectedCheckout }}</p>

@@ -36,3 +36,10 @@ def getInOutFromWatchlist(nombreAdmin, n):
     cursor.execute(f"SELECT ID, EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut FROM WatchlistIO WHERE AdminName='{nombreAdmin}' ORDER BY id DESC")
     return cursor.fetchmany(n)
 
+def getEmployeesInWatchList(nombreAdmin):
+    cursor.execute(f"SELECT EmployeeID FROM Watchlists WHERE AdminName='{nombreAdmin}'")
+    empleados = cursor.fetchall()
+    r = []
+    for empleado in empleados:
+        r.append(getEmployeeData(empleado[0])[0])
+    return r

@@ -45,6 +45,6 @@ if False:
 
         cmd = """CREATE TABLE IF NOT EXISTS Watchlists(
                 AdminName TEXT,
-                EmployeeName TEXT
+                EmployeeID INTEGER
                 )"""
         cursor.execute(cmd)
