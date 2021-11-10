@@ -43,3 +43,7 @@ def getEmployeesInWatchList(nombreAdmin):
     for empleado in empleados:
         r.append(getEmployeeData(empleado[0])[0])
     return r
+
+def getAdminChanges(n):
+    cursor.execute("SELECT * FROM AdminChanges ORDER BY ID DESC")
+    return cursor.fetchmany(n)
