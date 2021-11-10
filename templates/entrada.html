@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block content %}
+    {% extends "base.html" %} {% block content %}
 
 <div class="container-fluid">
     <div class="row m-4">
@@ -29,9 +29,8 @@
 
 
         <div class="col-6 col-md-4 float-right text-center bg-dark text-white " style="height: 550px; border-radius: 21px 21px 21px 21px;">
-            <img src="{{  url_for('static', filename='foto.jpg') }}" style="height: 150px; margin: 5%;"> {% for id, nombre, apellido, email, phoneNumber, address, zipCode, position in datosEmpleado %}
+            <img src="{{  url_for('static', filename='ey.png') }}" style="height: 150px; margin: 5%;"> {% for id, nombre, apellido, email, phoneNumber, address, zipCode, position in datosEmpleado %}
             <div style="margin: auto">
-                <h1>{{ apellido }}.jpg</h1>
                 <h4>Nombre: <a href="{{ url_for('empleado', idEmpleado = 1)}}">{{nombre}}{{apellido}}</a></h4>
                 <h4>Posición: {{ positions }}</h4>
                 <h4>Posicion: {{ position }}</h4>
