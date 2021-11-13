@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row m-5">
+        <div class="col float-left text-center">
+            <h1>Ultimas entradas de {{ nombre }}</h1>
+            <br>
+            <div>
+                <table class="table table-hover table-bordered table-resposive">
+                    <th>
+                        <td>
+                            <h5>Fecha</h5>
+                        </td>
+                        <td>
+                            <h5>Hora de Entrada</h5>
+                        </td>
+                        <td>
+                            <h5>Hora de Entrada Esperada</h5>
+                        </td>
+                        <td>
+                            <h5>Temperatura</h5>
+                        </td>
+                    </th>
+                    {% for id, date, time, expectedCheckIn, temperature in entradasEmpleado %}
+                    <tr class="{{ 'bg-success' if date == diaActual }}">
+                        <td>
+                            {{ id }}
+                        </td>
+                        <td>
+                            {{ date }}
+                        </td>
+                        <td>
+                            {{ time }}
+                        </td>
+                        <td>
+                            {{ expectedCheckIn }}
+                        </td>
+                        <td>
+                            {{ temperature }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="col float-right text-center">
+            <h1>Ultimas salidas de {{ nombre }}</h1>
+            <br>
+            <div>
+                <table class="table table-hover table-bordered table-resposive">
+                    <th>
+                        <td>
+                            <h5>Fecha</h5>
+                        </td>
+                        <td>
+                            <h5>Hora de Salida</h5>
+                        </td>
+                        <td>
+                            <h5>Hora de Salida Esperada</h5>
+                        </td>
+                        <td>
+                            <h5>Temperatura</h5>
+                        </td>
+                    </th>
+                    {% for id, date, time, expectedCheckOut, temperature in salidasEmpleado %}
+                    <tr class="{{ 'bg-success' if date == diaActual }}">
+                        <td>
+                            {{ id }}
+                        </td>
+                        <td>
+                            {{ date }}
+                        </td>
+                        <td>
+                            {{ time }}
+                        </td>
+                        <td>
+                            {{ expectedCheckOut }}
+                        </td>
+                        <td>
+                            {{ temperature }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
