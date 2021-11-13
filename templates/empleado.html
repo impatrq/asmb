@@ -28,9 +28,17 @@
                     <h4>Dirección: {{ address }}</h4>
                     <h4>Código Postal: {{ zipCode }}</h4>
                     <br>
-                    <a class="btn bg-secondary text-white" href="{{ url_for('entradasRecientes', idEmpleado=id) }}">
-                        <b>Entradas Recientes</b>
-                    </a>
+                    <div>
+                        <a class="btn bg-secondary text-white" href="{{ url_for('entradasRecientes', idEmpleado=id) }}">
+                            <b>Entradas Recientes</b>
+                        </a>
+                        <a class="btn bg-secondary text-white float-right">
+                            <b>Agregar a watchlist</b>
+                        </a>
+                    </div>
+                    
+
+                    
                 </div>
             </div>
         </div>
