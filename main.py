@@ -31,8 +31,13 @@ def entradasRecientes(idEmpleado):
     n = 20
     return render_template("entradasRecientes.html", entradasEmpleado = getInFrom(idEmpleado, n), salidasEmpleado = getOutFrom(idEmpleado, n), nombre = getEmployeeName(idEmpleado), diaActual = getDay())
 
+@app.route("/empleados")
+def empleados():
+    return render_template("empleados.html")
 
-
+@app.route("/estados")
+def estados():
+    return render_template("estados.html")
 
 
 
