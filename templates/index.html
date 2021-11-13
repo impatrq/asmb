@@ -47,9 +47,9 @@
                             {% for id, first, last, email, num, addr, zip, role in empleadosVigilados %}
                             <p class="h5">
                                 {{ id }}: {{ first }} {{ last }} 
-                                <img src="{{ url_for('static', filename='trash-fill.svg') }}" style="filter:invert(1); height:17px;">
+                                <img src="{{ url_for('static', filename='icons/trash-fill.svg') }}" style="filter:invert(1); height:17px;">
                                 <a href="{{ url_for('empleado', idEmpleado=id) }}">
-                                    <img src="{{ url_for('static', filename='file-earmark-person-fill.svg') }}" style="filter:invert(1); height:17px;">
+                                    <img src="{{ url_for('static', filename='icons/file-earmark-person-fill.svg') }}" style="filter:invert(1); height:17px;">
                                 </a>
                             </p>
                             
