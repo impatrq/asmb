@@ -8,3 +8,7 @@
     1px 1px 0 #000;
     
 }
+
+.eyeyeyexample::-webkit-scrollbar {
+    display: none;
+  }
