@@ -1,48 +1,33 @@
-    {% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
 
 <div class="container-fluid">
     <div class="row m-4">
         <div class="col-12 col-md-8">
             {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entrada %}
-            <h1><b>{{ "Entrada" if inOut == "In" else "Salida" }} de: {{ name }}</b></h1>
-            <br>
-            <div>
-                <h2><b>Id de la {{ "Entrada" if inOut == "In" else "Salida" }}: </b></h2>
-                <h4> ⇛ {{ id }}</h4>
-
-                <h2><b>Id del Empleado</b></h2>
-                <h4> ⇛ {{ employeeId }}</h4>
+                <h1><b>{{ "Entrada" if inOut == "In" else "Salida" }} de: {{ name }}</b></h1>
                 <br>
-            </div>
-            <div>
-                <h2><b>Dia de la Entrada: </b></h2>
-                <h4> ⇛ {{ day }}</h4>
+                <div>
+                    <h2><b>Id de la {{ "Entrada" if inOut == "In" else "Salida" }}: </b></h2>
+                    <h4> ⇛ {{ id }}</h4>
 
-                <h2><b>Horario de {{ "Entrada" if inOut == "In" else "Salida" }} </b></h2>
-                <h4> ⇛ {{ time }}</h4>
+                    <h2><b>Id del Empleado</b></h2>
+                    <h4> ⇛ {{ employeeId }}</h4>
+                    <br>
+                </div>
+                <div>
+                    <h2><b>Dia de la Entrada: </b></h2>
+                    <h4> ⇛ {{ day }}</h4>
 
-                <h2><b>{{ "Horario de Entrada Esperado" if inOut == "In" else "Horario de Salida Esperado" }} </b></h2>
-                <h4> ⇛ {{ expectedCheckin if inOut == "In" else expectedCheckout }}</h4>
-            </div>
+                    <h2><b>Horario de {{ "Entrada" if inOut == "In" else "Salida" }} </b></h2>
+                    <h4> ⇛ {{ time }}</h4>
+
+                    <h2><b>{{ "Horario de Entrada Esperado" if inOut == "In" else "Horario de Salida Esperado" }} </b></h2>
+                    <h4> ⇛ {{ expectedCheckin if inOut == "In" else expectedCheckout }}</h4>
+                </div>
             {% endfor %}
         </div>
-
-
-        <div class="col-6 col-md-4 float-right text-center bg-dark text-white " style="height: 550px; border-radius: 21px 21px 21px 21px;">
-            <img src="{{  url_for('static', filename='ey.png') }}" style="height: 150px; margin: 5%;"> {% for id, nombre, apellido, email, phoneNumber, address, zipCode, position in datosEmpleado %}
-            <div style="margin: auto">
-                <h4>Nombre: <a href="{{ url_for('empleado', idEmpleado = 1)}}">{{nombre}}{{apellido}}</a></h4>
-                <h4>Posición: {{ positions }}</h4>
-                <h4>Posicion: {{ position }}</h4>
-                <h4>Email: <a href="mailto:{{ email }}">{{ email }}</a></h4>
-                <h4>Telefono: {{ phoneNumber }}</h4>
-                <h4>Dirección: {{ address }}</h4>
-                <h4>Código Postal: {{ zipCode }}</h4>
-            </div>
-            {% endfor %}
-        </div>
-
 
     </div>
 
-    {% endblock %}
+{% endblock %}
