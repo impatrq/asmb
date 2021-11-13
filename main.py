@@ -24,11 +24,12 @@ def entrada(idEntrada):
 
 @app.route("/empleado/id/<idEmpleado>")  
 def empleado(idEmpleado):
-    n = 20 
-    return render_template("empleado.html", entradasEmpleado = getInFrom(idEmpleado, n), salidasEmpleado = getOutFrom(idEmpleado, n), nombre = getEmployeeName(idEmpleado), diaActual = getDay())
+    return render_template("empleado.html", datosEmpleado = getEmployeeData(idEmpleado))
 
-
-
+@app.route("/empleado/id/<idEmpleado>/EntradasRecientes")
+def entradasRecientes(idEmpleado):
+    n = 20
+    return render_template("entradasRecientes.html", entradasEmpleado = getInFrom(idEmpleado, n), salidasEmpleado = getOutFrom(idEmpleado, n), nombre = getEmployeeName(idEmpleado), diaActual = getDay())
 
 
 
