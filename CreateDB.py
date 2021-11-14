@@ -57,6 +57,7 @@ if False:
                 MAC TEXT PRIMARY KEY,
                 Time TIME,
                 Date DATE,
-                Estates TEXT
+                Estates TEXT,
+                id INTEGER
                 )"""
         cursor.execute(cmd)
