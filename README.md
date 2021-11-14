@@ -12,8 +12,8 @@
 - Funcionalidad para el boton de cerrar sesion
 
 ### - empleado/\<idEmpleado>
-- FUncion para el boton de agregar empleado a watchlist
+- Funcion para el boton de agregar empleado a watchlist
 
-### - pagina de login, estados de cabinas, crear usuario, agregar cabina, crear empleado.
+### - pagina de login, crear usuario, crear empleado , agregar cabina.
 
 - Eso, hacer todo
