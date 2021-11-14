@@ -34,7 +34,7 @@ def entradasRecientes(idEmpleado):
 
 @app.route("/empleados")
 def empleados():
-    return render_template("empleados.html")
+    return render_template("empleados.html", empleados = getEmployees())
 
 @app.route("/estados")
 def estados():
