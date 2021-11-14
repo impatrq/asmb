@@ -64,3 +64,8 @@ def getAllEstadosCabinas():
     for mac in macs:
         r.append(getEstadoCabina(mac[0]))
     return r
+
+
+def getEmployees():
+    cursor.execute("SELECT * FROM Employees")
+    return cursor.fetchall()
