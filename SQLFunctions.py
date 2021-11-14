@@ -47,3 +47,12 @@ def getEmployeesInWatchList(nombreAdmin):
 def getAdminChanges(n):
     cursor.execute("SELECT * FROM AdminChanges ORDER BY ID DESC")
     return cursor.fetchmany(n)
+
+
+def getAllCabinas():
+    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas")
+    return cursor.fetchall()
+
+def getEstadoCabina(mac):
+    cursor.execute(f"SELECT * FROM estadosCabinas WHERE MAC='{mac}' ORDER BY Date DESC")
+    return cursor.fetchone()
