@@ -2,6 +2,7 @@ from flask import Flask, render_template, redirect, url_for
 from flask_wtf import CSRFProtect
 from SQLFunctions import *
 from TimeFunctions import getDay
+import ast
 app = Flask(__name__)
 app.secret_key = 'eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'  
 csrf = CSRFProtect(app)
@@ -37,7 +38,12 @@ def empleados():
 
 @app.route("/estados")
 def estados():
-    return render_template("estados.html")
+    estados = getAllEstadosCabinas()
+    e = list()
+    for mac, time, date, states, n in estados:
+        e.append((mac, time, date, ast.literal_eval(states), n))
+    
+    return render_template("estados.html", estados = e)
 
 
 
