@@ -4,63 +4,30 @@
 <div class="container-fluid my-3 mx-1 text-center row align-items-center justify-content-center">
     <table class="table table-hover table-responsive table-bordered table-condensed" style="width: 1300px;">
         <th>
-            <td>
-                <h5>Nombre</h5>
-            </td>
-            <td>
-                <h5>ID</h5>
-            </td>
-            <td>
-                <h5>Dia</h5>
-            </td>
-            <td>
-                <h5>Hora</h5>
-            </td>
-            <td>
-                <h5>Hora de Entrada Esperada</h5>
-            </td>
-            <td>
-                <h5>Hora de Salida Esperada</h5>
-            </td>
-            <td>
-                <h5>Temperatura</h5>
-            </td>
-            <td>
-                <h5>In/Out</h5>
-            </td>
-            <td>
-                <h5>Más Info</h5>
-            </td>
+            <td><h5>Nombre</h5></td>
+            <td><h5>ID</h5></td>
+            <td><h5>Dia</h5></td>
+            <td><h5>Hora</h5></td>
+            <td><h5>Hora de Entrada Esperada</h5></td>
+            <td><h5>Hora de Salida Esperada</h5></td>
+            <td><h5>Temperatura</h5></td>
+            <td><h5>In/Out</h5></td>
+            <td><h5>Más Info</h5></td>
         </th>
 
         {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %}
-            {% if day == diaActual %}
-                <tr class="success">
-                    <td class="text-center">{{ id }}</td>
-                    <td>{{ name }}</td>
-                    <td>{{ employeeId }}</td>
-                    <td>{{ day }}</td>
-                    <td>{{ time }}</td>
-                    <td>{{ expectedCheckin }}</td>
-                    <td>{{ expectedCheckout }}</td>
-                    <td>{{ temperature }}</td>
-                    <td>{{ inOut }}</td>
-                    <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
-                </tr>
-            {% else %}
-                <tr>
-                    <td class="text-center">{{ id }}</td>
-                    <td>{{ name }}</td>
-                    <td>{{ employeeId }}</td>
-                    <td>{{ day }}</td>
-                    <td>{{ time }}</td>
-                    <td>{{ expectedCheckin }}</td>
-                    <td>{{ expectedCheckout }}</td>
-                    <td>{{ temperature }}</td>
-                    <td>{{ inOut }}</td>
-                    <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
-                </tr>
-            {% endif %}
+            <tr class="{{'success' if day == diaActual}}">
+                <td class="text-center">{{ id }}</td>
+                <td>{{ name }}</td>
+                <td>{{ employeeId }}</td>
+                <td>{{ day }}</td>
+                <td>{{ time }}</td>
+                <td>{{ expectedCheckin }}</td>
+                <td>{{ expectedCheckout }}</td>
+                <td>{{ temperature }}</td>
+                <td>{{ inOut }}</td>
+                <td class="text-center"><a href="{{ url_for('entrada', idEntrada=id) }}"><button>Info</button></a></td>
+            </tr>
         {% endfor %}
 
     </table>
