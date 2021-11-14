@@ -58,5 +58,10 @@ def getEstadoCabina(mac):
     return cursor.fetchone()
     
 def getAllEstadosCabinas():
-    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas ORDER BY Date DESC")
-    return cursor.fetchall()
+    """Get last State for each unique mac"""
+    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas")
+    macs = cursor.fetchall()
+    r = []
+    for mac in macs:
+        r.append(getEstadoCabina(mac[0]))
+    return r
