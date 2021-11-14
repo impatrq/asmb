@@ -61,3 +61,9 @@ if False:
                 id INTEGER
                 )"""
         cursor.execute(cmd)
+
+        cmd = """CREATE TABLE IF NOT EXISTS AdminAccounts(
+                Username TEXT PRIMARY KEY,
+                Password TEXT
+                )"""
+        cursor.execute(cmd)
