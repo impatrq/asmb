@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import CSRFProtect
-from SQLFunctions import getAllInOut, getInOut, getInFrom, getOutFrom, getEmployeeName, getEmployeeData, getNInOut, getInOutFromWatchlist, getEmployeesInWatchList, getAdminChanges
+from SQLFunctions import *
 from TimeFunctions import getDay
 app = Flask(__name__)
 app.secret_key = 'eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'  
