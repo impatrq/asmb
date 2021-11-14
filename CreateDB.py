@@ -53,3 +53,10 @@ if False:
                 )"""
         cursor.execute(cmd)
 
+        cmd = """CREATE TABLE IF NOT EXISTS EstadosCabinas(
+                MAC TEXT PRIMARY KEY,
+                Time TIME,
+                Date DATE,
+                Estates TEXT
+                )"""
+        cursor.execute(cmd)
