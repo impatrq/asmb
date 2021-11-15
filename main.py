@@ -98,6 +98,19 @@ def logout():
 
     return redirect(url_for("login"))
 
+@app.route("/empleados/watchlist/add/<idEmpleado>")
+def añadirEmpleadoAWatchlist(idEmpleado):
+
+    addEmployeeToWatchlist(session['username'], idEmpleado)
+
+    return redirect(url_for("empleado", idEmpleado = idEmpleado))
+
+@app.route("/empleados/watchlist/remove/<idEmpleado>")
+def eliminarEmpleadoDeWatchlist(idEmpleado):
+    
+        removeEmployeeFromWatchlist(session['username'], idEmpleado)
+    
+        return redirect(url_for("index"))
 
 
 if __name__ == "__main__":

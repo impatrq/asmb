@@ -84,3 +84,12 @@ def checkEmployee(name, surname, email, phone):
 def getEmployeeId(name, surname):
     cursor.execute(f'''SELECT ID FROM Employees WHERE Name="{name}" AND Surname="{surname}"''')
     return cursor.fetchone()[0]
+
+
+def addEmployeeToWatchlist(adminName, employeeId):
+    cursor.execute(f'''INSERT INTO Watchlists (AdminName, EmployeeID) VALUES ('{adminName}', '{employeeId}')''')
+    conn.commit()
+
+def removeEmployeeFromWatchlist(adminName, employeeId):
+    cursor.execute(f'''DELETE FROM Watchlists WHERE AdminName="{adminName}" AND EmployeeID="{employeeId}"''')
+    conn.commit()
