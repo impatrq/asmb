@@ -76,7 +76,7 @@ def createEmployee(name, surname, email, phone, address, zip, position):
     cursor.execute(cmd)
     conn.commit()
 
-def checkEmployee(name):
-    cursor.execute(f"SELECT * FROM Employees WHERE Name='{name}'")
+def checkEmployee(first, last):
+    cursor.execute(f"SELECT * FROM Employees WHERE Name='{first} AND Surname='{last}''")
     user = cursor.fetchone()
     return False if user is None else True
