@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <form id="LoginForm" method="POST">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {{ form.username.label() }}
+        {{ form.username() }}
+        <br>
+        {{ form.passw.label() }}
+        {{ form.passw() }}
+        <button type="submit">EY</button>
+    </form>
+</div>

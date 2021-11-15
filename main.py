@@ -1,12 +1,20 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, request, make_response, session, flash, g, redirect, url_for
 from flask_wtf import CSRFProtect
 from SQLFunctions import *
 from TimeFunctions import getDay
 import ast
+import Forms
+from Login import *
+
 app = Flask(__name__)
 app.secret_key = 'eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'  
 csrf = CSRFProtect(app)
 
+
+@app.before_request
+def before_request():
+    if 'username' not in session and (request.endpoint != 'login'): # or request.endpoint != 'index'
+        return redirect(url_for('login'))
 
 
 @app.route("/")
@@ -45,8 +53,63 @@ def estados():
     
     return render_template("estados.html", estados = e)
 
+@app.route("/empleado/add", methods = ['GET', 'POST'])
+def añadirEmpleado():
+    empleados = Forms.EmpleadosForm(request.form)
+
+    if request.method == "POST":
+        print(empleados.Name.data)
+        print(empleados.Surname.data)
+        
+    return render_template("añadirEmpleado.html", form = empleados)
 
 
+@app.route("/login", methods = ['GET', 'POST'])
+def login():
+    login = Forms.LoginForm(request.form)
+
+    if request.method == 'POST' and login.validate():
+        username = login.username.data
+        passw = login.passw.data
+
+        if validateLogin(username, passw):
+            session['username'] = username
+
+            return redirect(url_for("index"))
+    else:
+        flash("Usuario o contraseña incorrectos")
+
+    return render_template('login.html', form = login)
+
+
+@app.route("/logout")
+def logout():
+    session.pop("username", None)
+    session.pop("passw", None)
+
+    return redirect(url_for("login"))
+
+
+if False:
+    @app.route("/sign-in", methods = ['GET', 'POST'])
+    def sign_in():
+        '''Ruta para registrar tu usuario con la necesidad de un usuario, contraseña y email'''   
+        usernamea = ''
+        passw = ''
+        sign_in = forms.Sign_In(request.form)
+
+        if request.method == "POST" and sign_in.validate():
+
+            usernamea = sign_in.username.data
+            passw = sign_in.passw.data
+
+            if validateUser(usernamea):
+                flash("Este usuario ya esta creado")
+                
+            else:
+                createUser(usernamea, passw, 'n/a', 'n/a', 'n/a')
+
+        return render_template('register.html', form = sign_in)
 
 
 
