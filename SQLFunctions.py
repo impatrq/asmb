@@ -69,3 +69,9 @@ def getAllEstadosCabinas():
 def getEmployees():
     cursor.execute("SELECT * FROM Employees")
     return cursor.fetchall()
+
+def createEmployee(name, surname, email, phone, address, zip, position):
+    cmd = f'''INSERT INTO Employees (Name, Surname, Email, PhoneNumber, Address, ZipCode, Position)
+    VALUES ('{name}', '{surname}', '{email}', '{phone}', '{address}', '{zip}', '{position}')'''
+    cursor.execute(cmd)
+    conn.commit()
