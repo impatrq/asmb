@@ -60,7 +60,7 @@ def añadirEmpleado():
         print(newEmployee.Name.data)
         print(newEmployee.Surname.data)
         
-    return render_template("añadirEmpleado.html", form = empleados)
+    return render_template("añadirEmpleado.html", form = newEmployee)
 
 
 @app.route("/login", methods = ['GET', 'POST'])
