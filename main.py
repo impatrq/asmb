@@ -66,7 +66,7 @@ def añadirEmpleado():
         position = newEmployee.Position.data
 
         if checkEmployee(first, last, email, phone):
-            flash("Este empleado ya existe")
+            return redirect(url_for('empleado', idEmpleado = getEmployeeId(first, last) ) )
         else:
             createEmployee(first, last, email, phone, addr, zip, position)
         

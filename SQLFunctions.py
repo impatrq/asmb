@@ -80,3 +80,7 @@ def checkEmployee(name, surname, email, phone):
     cursor.execute(f'''SELECT * FROM Employees WHERE (Name="{name}" AND Surname="{surname}") OR Email="{email}" OR PhoneNumber="{phone}"''')
     user = cursor.fetchone()
     return False if user is None else True
+
+def getEmployeeId(name, surname):
+    cursor.execute(f'''SELECT ID FROM Employees WHERE Name="{name}" AND Surname="{surname}"''')
+    return cursor.fetchone()[0]
