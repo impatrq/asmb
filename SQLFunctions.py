@@ -77,6 +77,6 @@ def createEmployee(name, surname, email, phone, address, zip, position):
     conn.commit()
 
 def checkEmployee(name, surname, email, phone):
-    cursor.execute(f'''SELECT * FROM Employees WHERE (Name="{name}" AND Surname="{surname}) OR Email='{email} OR Phone='{phone}''"''')
+    cursor.execute(f'''SELECT * FROM Employees WHERE (Name="{name}" AND Surname="{surname}") OR Email="{email}" OR PhoneNumber="{phone}"''')
     user = cursor.fetchone()
     return False if user is None else True
