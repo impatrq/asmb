@@ -57,8 +57,18 @@ def añadirEmpleado():
     newEmployee = Forms.AñadirEmpleadoForm(request.form)
 
     if request.method == "POST" and newEmployee.validate():
-        print(newEmployee.Name.data)
-        print(newEmployee.Surname.data)
+        first = newEmployee.Name.data
+        last = newEmployee.Surname.data
+        email = newEmployee.Email.data
+        phone = newEmployee.PhoneNumber.data
+        addr = newEmployee.Address.data
+        zip = newEmployee.ZipCode.data
+        position = newEmployee.Position.data
+
+        if checkEmployee(first, last):
+            flash("Este empleado ya existe")
+        else:
+            createEmployee(first, last, email, phone, addr, zip, position)
         
     return render_template("añadirEmpleado.html", form = newEmployee)
 
