@@ -4,7 +4,7 @@ from wtforms import validators
 from wtforms.fields.html5 import EmailField
 
 
-class EmpleadosForm(Form):
+class AñadirEmpleadoForm(Form):
     Name = StringField('Nombre: ', [validators.required(message = "Debe ingresar un Nombre")])
     Surname = StringField('Apellido: ', [validators.required(message = "Debe ingresar un Apellido")])
     Email = EmailField('Email: ', [validators.email(message='Ingresa un email valido'),
@@ -25,7 +25,7 @@ class LoginForm(Form):
     passw = PasswordField('Contraseña',[validators.required(message= 'Se necesita una contraseña')])
 
 
-class Sign_In(Form):
+class CrearAdminForm(Form):
     username = StringField('Username', [validators.length(min=4, max=30, message='Ingrese un username mas largo o mas corto' ), 
                                         validators.required(message = "El username es requerido")])
 

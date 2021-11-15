@@ -54,7 +54,7 @@ def estados():
 
 @app.route("/empleado/add", methods = ['GET', 'POST'])
 def añadirEmpleado():
-    empleados = Forms.EmpleadosForm(request.form)
+    empleados = Forms.AñadirEmpleadoForm(request.form)
 
     if request.method == "POST":
         print(empleados.Name.data)
