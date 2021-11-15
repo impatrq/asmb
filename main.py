@@ -65,7 +65,6 @@ def añadirEmpleado():
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
-
     login = Forms.LoginForm(request.form)
 
     if request.method == 'POST' and login.validate():
@@ -76,8 +75,8 @@ def login():
             session['username'] = username
 
             return redirect(url_for("index"))
-    else:
-        flash("Usuario o contraseña incorrectos")
+        else:
+            flash("Usuario o contraseña incorrectos")
 
     return render_template('login.html', form = login)
 
