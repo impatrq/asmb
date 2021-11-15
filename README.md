@@ -16,6 +16,11 @@
 
 - Eso, hacer todo
 
-### - pagina de login y crear empleado
+### - crear empleado
 
 - Dar estilo
+
+
+### - pagina de login 
+
+- Corregir el \<flash>
