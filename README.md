@@ -9,16 +9,10 @@
 
 - Linkear links a las diferentes paginas
 
-### - empleado/\<idEmpleado>
-- Funcion para el boton de agregar empleado a watchlist
 
-### - crear usuario y agregar cabina.
+### - crear usuario
 
 - Eso, hacer todo
-
-### - crear empleado
-
-- Dar estilo
 
 
 ### - pagina de login 
