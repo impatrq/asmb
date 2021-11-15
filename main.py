@@ -46,12 +46,11 @@ def empleados():
 
 @app.route("/estados")
 def estados():
-    estados = getAllEstadosCabinas()
-    e = list()
-    for mac, time, date, states, n in estados:
-        e.append((mac, time, date, ast.literal_eval(states), n))
+    estados = list()
+    for mac, time, date, states, n in getAllEstadosCabinas():
+        estados.append((mac, time, date, ast.literal_eval(states), n))
     
-    return render_template("estados.html", estados = e)
+    return render_template("estados.html", estados = estados)
 
 @app.route("/empleado/add", methods = ['GET', 'POST'])
 def añadirEmpleado():
@@ -88,29 +87,6 @@ def logout():
     session.pop("passw", None)
 
     return redirect(url_for("login"))
-
-
-if False:
-    @app.route("/sign-in", methods = ['GET', 'POST'])
-    def sign_in():
-        '''Ruta para registrar tu usuario con la necesidad de un usuario, contraseña y email'''   
-        usernamea = ''
-        passw = ''
-        sign_in = forms.Sign_In(request.form)
-
-        if request.method == "POST" and sign_in.validate():
-
-            usernamea = sign_in.username.data
-            passw = sign_in.passw.data
-
-            if validateUser(usernamea):
-                flash("Este usuario ya esta creado")
-                
-            else:
-                createUser(usernamea, passw, 'n/a', 'n/a', 'n/a')
-
-        return render_template('register.html', form = sign_in)
-
 
 
 
