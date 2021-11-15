@@ -65,7 +65,7 @@ def añadirEmpleado():
         zip = newEmployee.ZipCode.data
         position = newEmployee.Position.data
 
-        if checkEmployee(first, last):
+        if checkEmployee(first, last, email, phone):
             flash("Este empleado ya existe")
         else:
             createEmployee(first, last, email, phone, addr, zip, position)
