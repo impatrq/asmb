@@ -52,19 +52,19 @@ if not all(getEncrypterData()):
 
 
 
-def createUser(username, password):
+def createAdmin(username, password):
     cmd = f'''INSERT INTO AdminAccounts (username, password)
     VALUES ('{username}', '{encrypter.encrypt(password, times)}')'''
     cursor.execute(cmd)
     conn.commit()
 
-def checkUser(username):
+def checkAdmin(username):
     cmd = f'''SELECT * FROM AdminAccounts WHERE username = '{username}' '''
     cursor.execute(cmd)
     user = cursor.fetchone()
     return user if user is None else True
 
-def validateLogin(username, password):
+def loginAdmin(username, password):
     cmd = f'''SELECT * FROM AdminAccounts WHERE username = '{username}' AND password = '{encrypter.encrypt(password, times)}' '''
     cursor.execute(cmd)
     user = cursor.fetchone()

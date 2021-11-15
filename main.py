@@ -54,24 +54,25 @@ def estados():
 
 @app.route("/empleado/add", methods = ['GET', 'POST'])
 def añadirEmpleado():
-    empleados = Forms.AñadirEmpleadoForm(request.form)
+    newEmployee = Forms.AñadirEmpleadoForm(request.form)
 
-    if request.method == "POST":
-        print(empleados.Name.data)
-        print(empleados.Surname.data)
+    if request.method == "POST" and newEmployee.validate():
+        print(newEmployee.Name.data)
+        print(newEmployee.Surname.data)
         
     return render_template("añadirEmpleado.html", form = empleados)
 
 
 @app.route("/login", methods = ['GET', 'POST'])
 def login():
+
     login = Forms.LoginForm(request.form)
 
     if request.method == 'POST' and login.validate():
         username = login.username.data
         passw = login.passw.data
 
-        if validateLogin(username, passw):
+        if loginAdmin(username, passw):
             session['username'] = username
 
             return redirect(url_for("index"))
