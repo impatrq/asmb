@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+{% for mac, time, date, estados, id in estado %}
+    {% for e in estados %}
+        <h4>{{ e }}</h4>
+    {% endfor %}
+{% endfor %}
+
+
+
+{% endblock %}

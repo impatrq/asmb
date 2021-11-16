@@ -52,6 +52,14 @@ def estados():
     
     return render_template("estados.html", estados = estados)
 
+@app.route("/estado/cabina/id/<macCabina>")
+def cabina(macCabina):
+    estado = list()
+    for mac, time, date, states, n in getEstadoCabina(macCabina):
+        estado.append((mac, time, date, ast.literal_eval(states), n))
+
+    return render_template("cabina.html", estado = estado)
+
 @app.route("/empleado/add", methods = ['GET', 'POST'])
 def añadirEmpleado():
     newEmployee = Forms.AñadirEmpleadoForm(request.form)
