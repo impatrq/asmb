@@ -6,7 +6,7 @@
 - Definir q poner en el medio de la pagina
 
 
-### - crear usuario
+### - crear usuario, ver estado de cabina
 
 - Eso, hacer todo
 
