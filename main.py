@@ -123,7 +123,8 @@ def logout():
 def añadirEmpleadoAWatchlist(idEmpleado):
 
     addEmployeeToWatchlist(session['username'], idEmpleado)
-    logAdminChange(session['username'], "Añadido empleado a watchlist: " + getEmployeeName(idEmpleado))
+    first, last = getEmployeeName(idEmpleado)
+    logAdminChange(session['username'], "Añadido empleado a watchlist: " + first + " " + last)
 
     return redirect(url_for("empleado", idEmpleado = idEmpleado))
 
@@ -131,7 +132,8 @@ def añadirEmpleadoAWatchlist(idEmpleado):
 def eliminarEmpleadoDeWatchlist(idEmpleado):
     
         removeEmployeeFromWatchlist(session['username'], idEmpleado)
-        logAdminChange(session['username'], "Eliminado empleado de watchlist: " + getEmployeeName(idEmpleado))
+        first, last = getEmployeeName(idEmpleado)
+        logAdminChange(session['username'], "Eliminado empleado de watchlist: " + first + " " + last)
 
         return redirect(url_for("index"))
 
