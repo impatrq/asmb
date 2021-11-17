@@ -13,4 +13,9 @@
 
 ### - pagina de login 
 
-- Corregir el \<flash>12
+- Corregir el \<flash>
+
+
+### - pagina de estado de cabina
+
+- Dar estilo
