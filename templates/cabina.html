@@ -1,13 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="container-fluid m-4">
+    <h2><b>Errores en los sensores: </b></h2>
+    <div class="m-3">
+        {% for mac, time, date, estados, id in estado %}
+                <h5>Sensor de Temperatura: {{ estados[0] }}</h5>
+                <h5>Lector de Tarjetas: {{ estados[1] }}</h5>
+                <h5>Sensor de Proximidad (Entrada):  {{ estados[2] }}</h5>
+                <h5>Sensor de Proximidad (Alcohol):  {{ estados[3] }}</h5>
+                <h5>Sensor de Proximidad (Salida):  {{ estados[4] }}</h5>
+                <h5>Camara: {{ estados[7] }} </h5>
+        {% endfor %}
+    </div>
+    <a class="btn btn-primary">Estados recientes de la cabina</a>
 
-{% for mac, time, date, estados, id in estado %}
-    {% for e in estados %}
-        <h4>{{ e }}</h4>
-    {% endfor %}
-{% endfor %}
-
-
+</div>
 
 {% endblock %}
