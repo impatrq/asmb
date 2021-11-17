@@ -76,6 +76,9 @@ def getAllEstadosCabinas():
         r.append(getEstadoCabina(mac[0])[0])
     return r
 
+def getEstadoCabinaRecientes(macCabina):
+    cursor.execute(f'''SELECT * FROM EstadosCabinas WHERE MAC="{macCabina}" ORDER BY Date DESC, Time DESC''')
+    return cursor.fetchall()
 
 def getEmployees():
     cursor.execute("SELECT * FROM Employees")

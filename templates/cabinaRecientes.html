@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid row align-items-center justify-content-center">
+    <table class="my-4 mx-5 table table-responsive table-bordered table-condensed h5" style="width: 1300px;">
+        <tr class="h4">
+            <td><b>Dia</b></td>
+            <td><b>Hora</b></td>
+            <td><b>Temperatura</b></td>
+            <td><b>Tarjetas</b></td>
+            <td><b>Proximidad (entrada)</b></td>
+            <td><b>Proximidad (alcohol)</b></td>
+            <td><b>Proximidad (salida)</b></td>
+            <td><b>Cámara</b></td> 
+        </tr>
+        <tr>
+            {% for _, time, date, estates, _ in estados %}
+                <td>{{ date }}</td>
+                <td>{{ time }}</td>
+                <td>{{ estates[0] }}</td>
+                <td>{{ estates[1] }}</td>
+                <td>{{ estates[2] }}</td>
+                <td>{{ estates[3] }}</td>
+                <td>{{ estates[4] }}</td>
+                <td>{{ estates[7] }}</td>
+            {% endfor %}
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
