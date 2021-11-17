@@ -108,6 +108,10 @@ def removeEmployeeFromWatchlist(adminName, employeeId):
     cursor.execute(f'''DELETE FROM Watchlists WHERE AdminName="{adminName}" AND EmployeeID="{employeeId}"''')
     conn.commit()
 
+def logAdminChange(adminName, action):
+    cursor.execute(f'''INSERT INTO AdminChanges (AdminName, Change, Time, Day) VALUES ("{adminName}", "{action}", "{getTime()}", "{getDay()}")''')
+    conn.commit()
+
 
 #################################################################################
 
