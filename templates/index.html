@@ -6,7 +6,7 @@
 
         <div class="col bg-dark" style="border-radius: 10px">
             <div class="bg-secondary bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
-                <h3>Entradas Recientes</h3>
+                <h3>Entradas/Salidas Recientes</h3>
             </div>
             <div class="overflow-auto" style="height:900px;">
                 {% for id, name, _, _, time, expectedCheckin, expectedCheckout, temperature, inOut in entradas %}
@@ -16,22 +16,21 @@
                         <p class="h5">Horario Esperado de {{ "Entrada" if inOut == 'In' else "Salida" }}: {{ expectedCheckin if inOut == 'In' else expectedCheckout }}</p>
                         <a class="my-2 btn {{ 'btn-success' if ((time <= expectedCheckin) if inOut == 'In' else (time >= expectedCheckout)) else 'btn-danger' }}" href="{{ url_for('entrada', idEntrada=id) }}">Ver Entrada </a>
                     </div>
-
                 {% endfor %}
             </div>
         </div>  
 
         <div class="col-6">
             <div class="row">
-                <div class="col" style="height:500px">
-                    XD
+                <div class="col text-center" >
+                    <img src="{{ url_for('static', filename='photos/background.jpg') }}" style="height:300px">
                 </div>
                 <div class="row m-1 pb-0" style="height:450px;">
                     <div class="col bg-secondary mx-3" style="border-radius:10px">
                         <div class="bg-dark bg-opacity-75 text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top:7px;">
                             <h3>Cambios de admins</h3>
                         </div>
-                        <div class="row text-white m-1 overflow-auto" style="height:392px;">
+                        <div class="row text-white m-1 overflow-auto" style="height:589px;">
                             {% for id, adminName, change, time, day in cambiosAdmins %}
                                 <p class="h5">  
                                     [{{ id }}] {{ adminName }}: {{ change }} 
@@ -43,7 +42,7 @@
                         <div class="bg-secondary text-white h3 text-center bg-gradient" style="height: 50px; border-radius: 0 0 10px 10px; padding-top: 7px;">
                             <h3>Empleados en la watchlist</h3>
                         </div>
-                        <div class="text-white m-1 overflow-auto" style="height:392px;">
+                        <div class="text-white m-1 overflow-auto" style="height:589px;">
                             {% for id, first, last, email, num, addr, zip, role in empleadosVigilados %}
                             <p class="h5">
                                 {{ id }}: {{ first }} {{ last }} 
