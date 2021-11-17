@@ -21,7 +21,7 @@ def before_request():
 def index():
     adminName = "admin"
     n = 100
-    return render_template("index.html", entradas = getNInOut(n), entradasPrioritarias = getInOutFromWatchlist(adminName, n), empleadosVigilados = getEmployeesInWatchList(adminName), cambiosAdmins = getAdminChanges(n))
+    return render_template("index.html", entradas = getNInOut(n), entradasPrioritarias = getInOutFromWatchlist(adminName, n), empleadosVigilados = getEmployeesInWatchListFrom(adminName), cambiosAdmins = getAdminChanges(n))
     
 @app.route("/entradas")
 def entradas():
