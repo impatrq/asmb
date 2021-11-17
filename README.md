@@ -1,9 +1,5 @@
 ## [TODO]
 
-### - panel/
-
-- Registrar los ultimos movimiento de admins
-
 
 ### - crear usuario
 
