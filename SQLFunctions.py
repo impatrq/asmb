@@ -62,7 +62,7 @@ def getAdminChanges(n):
 
 
 def getAllCabinas():
-    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas")
+    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas ORDER BY id ASC")
     return cursor.fetchall()
 
 def getEstadoCabina(mac):
