@@ -56,7 +56,9 @@ def estados():
 def cabina(macCabina):
     estado = list()
     for mac, time, date, states, n in getEstadoCabina(macCabina):
-        estado.append((mac, time, date, ast.literal_eval(states), n))
+
+        boolStates = [bool(e) for e in ast.literal_eval(states)]
+        estado.append((mac, time, date, boolStates, n))
 
     return render_template("cabina.html", estado = estado)
 
