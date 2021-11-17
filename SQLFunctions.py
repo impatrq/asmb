@@ -51,7 +51,10 @@ def getEmployeesIDInWatchList():
 
 def getAdminNameFromWatchlist(employeeId):
     cursor.execute(f'''SELECT AdminName FROM Watchlists WHERE EmployeeID="{employeeId}"''')
-    return cursor.fetchone()
+    try:
+        return cursor.fetchone()[0]
+    except TypeError:
+        return None
 
 def getAdminChanges(n):
     cursor.execute("SELECT * FROM AdminChanges ORDER BY ID DESC")
@@ -125,16 +128,15 @@ def logEstadoCabina(mac, estado):
 
 def logEmployeeIO(employeeID, expectedCheckIn, expectedCheckOut, temperature, inOut):
     first, last = getEmployeeName(employeeID)
-    cursor.execute(f'''INSERT INTO EmployeeIO (EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut) 
+    cursor.execute(f'''INSERT INTO EmployeeIO(EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut) 
                                        VALUES ("{first + " " + last}",{employeeID},"{getDay()}","{getTime()}","{expectedCheckIn}","{expectedCheckOut}",{temperature},"{inOut}")''')
     conn.commit()
     ids = getEmployeesIDInWatchList()
     for id in ids:
         if id[0]==employeeID:
-            print(getAdminNameFromWatchlist(employeeID))
-            cursor.execute(f'''INSERT INTO WatchlistIO (EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut, AdminName)) 
+            cursor.execute(f'''INSERT INTO WatchlistIO (EmployeeName, EmployeeID, Date, Time, ExpectedCheckIn, EstimatedCheckOut, Temperature, InOut, AdminName) 
                                                 VALUES ("{first + " " + last}",{employeeID},"{getDay()}","{getTime()}",
-                                                "{expectedCheckIn}","{expectedCheckOut}",{temperature},"{inOut}","{'ey'}")''')
+                                                "{expectedCheckIn}","{expectedCheckOut}",{temperature},"{inOut}","{getAdminNameFromWatchlist(employeeID)}")''')
             conn.commit()
             break
     
