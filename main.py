@@ -60,7 +60,7 @@ def cabina(macCabina):
         boolStates = [bool(e) for e in ast.literal_eval(states)]
         estado.append((mac, time, date, boolStates, n))
 
-    return render_template("cabina.html", estado = estado)
+    return render_template("cabina.html", estado = estado, mac=macCabina)
 
 @app.route("/estado/cabina/id/<macCabina>/*")
 def cabinaRecientes(macCabina):

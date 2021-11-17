@@ -13,7 +13,7 @@
             <h5>Cámara: {{ estados[7] }} </h5>
         {% endfor %}
     </div>
-    <a class="btn btn-primary">Estados recientes de la cabina</a>
+    <a class="btn btn-primary" href="{{ url_for('cabinaRecientes', macCabina = mac ) }}">Estados recientes de la cabina</a>
 
 </div>
 
