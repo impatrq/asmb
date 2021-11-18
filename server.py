@@ -4,7 +4,7 @@ import json
 from SQLFunctions import logEstadoCabina, logEmployeeIO
 
 HEADER = 16
-IP = socket.gethostbyname(socket.gethostname())
+IP = "192.168.0.132"
 PORT = 9090
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = '!DISCONNECT'
@@ -25,6 +25,7 @@ def handle_client(conn, addr):
                 connected = False
 
             msg = json.loads(msg)
+            print(msg)
             if msg['Type'] == 'In' or msg['Type'] == 'Out':
                 data = msg['Data']
                 logEmployeeIO(data['EmployeeID'], data['ExpectedCheckIn'], data['ExpectedCheckOut'], data['Temperature'], msg['Type'])
