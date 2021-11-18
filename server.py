@@ -41,5 +41,4 @@ def server_init():
         thread = threading.Thread(target=handle_client, args=(conn, addr))
         thread.start()
     
-server_thread = threading.Thread(target=server_init)
-server_thread.start()
+

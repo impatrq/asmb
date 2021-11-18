@@ -5,6 +5,8 @@ from TimeFunctions import getDay
 import ast
 import Forms
 from Login import *
+from server import server_init
+import threading
 
 app = Flask(__name__)
 app.secret_key = 'eyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy'  
@@ -140,3 +142,5 @@ def eliminarEmpleadoDeWatchlist(idEmpleado):
 
 if __name__ == "__main__":
     app.run(debug=True)
+    server_thread = threading.Thread(target=server_init)
+    server_thread.start()
