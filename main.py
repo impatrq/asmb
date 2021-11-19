@@ -145,6 +145,21 @@ def eliminarEmpleadoDeWatchlist(idEmpleado):
 
         return redirect(url_for("index"))
 
+@app.route("/dashboard/cuentas/add", methods = ['GET', 'POST'])
+def añadirCuenta():
+    admin = Forms.CrearAdminForm(request.form)
+
+    if request.method == 'POST' and admin.validate():
+        username = admin.username.data
+        passw = admin.passw.data
+
+        if not checkAdmin(username):
+            createAdmin(username, passw)
+            logAdminChange(session['username'], "Añadido administrador: " + username)
+            return redirect(url_for('dashboard'))
+
+    return render_template("crearAdmin.html", form = admin)
+
 if __name__ == "__main__":
     app.run(debug=True)
     server_thread = threading.Thread(target=server_init)
