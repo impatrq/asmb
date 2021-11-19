@@ -19,8 +19,13 @@ def before_request():
         return redirect(url_for('login'))
 
 
+
 @app.route("/")
 def index():
+    return redirect(url_for("dashboard"))
+
+@app.route("/dashboard")
+def dashboard():
     adminName = "admin"
     n = 100
     return render_template("index.html", entradas = getNInOut(n), entradasPrioritarias = getInOutFromWatchlist(adminName, n), empleadosVigilados = getEmployeesInWatchListFrom(adminName), cambiosAdmins = getAdminChanges(n))
@@ -140,8 +145,7 @@ def eliminarEmpleadoDeWatchlist(idEmpleado):
 
         return redirect(url_for("index"))
 
-
 if __name__ == "__main__":
     app.run(debug=True)
     server_thread = threading.Thread(target=server_init)
-    #server_thread.start()
+    server_thread.start()
