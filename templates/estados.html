@@ -3,10 +3,10 @@
 
 <div class="container-fluid">
     <div class="row px-3">
-        {% for mac, time, date, states, n in estados %}
+        {% for mac, time, date, states in estados %}
             <div class="card m-4 p-0" style="width: 250px;">
                 <div class="card-header bg-dark bg-opacity-75 bg-gradient text-white" style="border-radius: 20px 20px 0 0;">
-                    <h5 class="card-title m-2"><b>Cabina Número {{ n }}</b></h5>
+                    <h5 class="card-title m-2"><b>Cabina</b></h5>
                 </div>
                 <div class="card-body bg-secondary bg-opacity-75" style="border-radius: 0 0 20px 20px;">
                     <p class="card-text"><b>MAC:</b> {{ mac }}</p>

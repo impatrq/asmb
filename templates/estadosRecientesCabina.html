@@ -13,8 +13,9 @@
             <td><b>Proximidad (salida)</b></td>
             <td><b>Cámara</b></td> 
         </tr>
+        {% for _, time, date, estates in estados %}
         <tr>
-            {% for _, time, date, estates, _ in estados %}
+            
                 <td>{{ date }}</td>
                 <td>{{ time }}</td>
                 <td>{{ estates[0] }}</td>
@@ -23,8 +24,9 @@
                 <td>{{ estates[3] }}</td>
                 <td>{{ estates[4] }}</td>
                 <td>{{ estates[7] }}</td>
-            {% endfor %}
+            
         </tr>
+        {% endfor %}
     </table>
 </div>
 

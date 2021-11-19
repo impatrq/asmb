@@ -49,18 +49,18 @@ def empleados():
 @app.route("/estados")
 def estados():
     estados = list()
-    for mac, time, date, states, n in getAllEstadosCabinas():
-        estados.append((mac, time, date, ast.literal_eval(states), n))
+    for mac, time, date, states in getAllEstadosCabinas():
+        estados.append((mac, time, date, ast.literal_eval(states)))
     
-    return render_template("estados.html", estados = estados)
+    return render_template("estados.html", estados = estados, cabinas = len(estados))
 
 @app.route("/estado/cabina/id/<macCabina>")
 def cabina(macCabina):
     estado = list()
 
-    for mac, time, date, states, n in getEstadoCabina(macCabina):
+    for mac, time, date, states in getEstadoCabina(macCabina):
         boolStates = [bool(e) for e in ast.literal_eval(states)]
-        estado.append((mac, time, date, boolStates, n))
+        estado.append((mac, time, date, boolStates))
 
     return render_template("estadoCabina.html", estado = estado, mac=macCabina)
 
@@ -68,11 +68,11 @@ def cabina(macCabina):
 def cabinaRecientes(macCabina):
     estados = list()
 
-    for mac, time, date, states, n in getEstadoCabinaRecientes(macCabina): 
+    for mac, time, date, states in getEstadoCabinaRecientes(macCabina): 
         boolStates = [bool(e) for e in ast.literal_eval(states)]
-        estados.append((mac, time, date, boolStates, n))
+        estados.append((mac, time, date, boolStates))
 
-    return render_template("estadoRecientesCabina.html", estados = estados)
+    return render_template("estadosRecientesCabina.html", estados = estados)
 
 @app.route("/empleado/add", methods = ['GET', 'POST'])
 def añadirEmpleado():
@@ -143,4 +143,4 @@ def eliminarEmpleadoDeWatchlist(idEmpleado):
 if __name__ == "__main__":
     app.run(debug=True)
     server_thread = threading.Thread(target=server_init)
-    server_thread.start()
+    #server_thread.start()

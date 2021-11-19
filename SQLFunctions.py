@@ -62,7 +62,7 @@ def getAdminChanges(n):
 
 
 def getAllCabinas():
-    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas ORDER BY id ASC")
+    cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas")
     return cursor.fetchall()
 
 def getEstadoCabina(mac):
@@ -115,23 +115,10 @@ def logAdminChange(adminName, action):
 
 #################################################################################
 
-def getLastCabinasID():
-    cursor.execute("SELECT DISTINCT(id) FROM estadosCabinas ORDER BY id ASC")
-    return cursor.fetchone()[0] if cursor.fetchone() is not None else None
-
-def getCabinaID(mac):
-    cursor.execute(f'''SELECT id FROM estadosCabinas WHERE MAC="{mac}" ORDER BY id DESC''')
-    return cursor.fetchone()
 
 def logEstadoCabina(mac, estado):
-    id = getCabinaID(mac)
-    if id is not None:
-        cursor.execute(f'''INSERT INTO EstadosCabinas VALUES ("{mac}", "{getTime()}", "{getDay()}", "{estado}", {id})''')
-        conn.commit()    
-    else: 
-        cursor.execute(f'''INSERT INTO EstadosCabinas VALUES ("{mac}", "{getTime()}", "{getDay()}", "{estado}", {getLastCabinasID()+1})''')
-        conn.commit()  
-
+    cursor.execute(f'''INSERT INTO EstadosCabinas (MAC, Time, Date, Estates) VALUES ("{mac}", "{getTime()}", "{getDay()}", "{estado}")''')
+    conn.commit()    
 
 def logEmployeeIO(employeeID, expectedCheckIn, expectedCheckOut, temperature, inOut):
     first, last = getEmployeeName(employeeID)

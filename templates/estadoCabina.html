@@ -4,7 +4,7 @@
 <div class="container-fluid m-4">
     <h2><b>Errores en los sensores: </b></h2>
     <div class="m-3">
-        {% for mac, time, date, estados, id in estado %}
+        {% for mac, time, date, estados in estado %}
             <h5>Sensor de Temperatura: {{ estados[0] }}</h5>
             <h5>Lector de Tarjetas: {{ estados[1] }}</h5>
             <h5>Sensor de Proximidad (Entrada):  {{ estados[2] }}</h5>
