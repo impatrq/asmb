@@ -36,7 +36,7 @@ def entradas():
 
 @app.route("/entrada/id/<idEntrada>")
 def entrada(idEntrada): 
-    return render_template("entrada.html", entrada = getInOut(idEntrada), datosEmpleado = getEmployeeData(1))
+    return render_template("entrada.html", entrada = getInOut(idEntrada), idEmpleado = getEmpleadoFromIO(idEntrada))
 
 @app.route("/empleado/id/<idEmpleado>")  
 def empleado(idEmpleado):

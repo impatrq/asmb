@@ -5,7 +5,7 @@
     <div class="row m-4">
         <div class="col-12 col-md-8">
             {% for id, name, employeeId, day, time, expectedCheckin, expectedCheckout, temperature, inOut in entrada %}
-                <h1><b>{{ "Entrada" if inOut == "In" else "Salida" }} de: {{ name }}</b></h1>
+                <h1><b>{{ "Entrada" if inOut == "In" else "Salida" }} de: <a href="{{ url_for('empleado', idEmpleado=idEmpleado) }}">{{ name }}</a></b></h1>
                 <br>
                 <div>
                     <h2><b>Id de la {{ "Entrada" if inOut == "In" else "Salida" }}: </b></h2>

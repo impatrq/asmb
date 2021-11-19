@@ -60,6 +60,9 @@ def getAdminChanges(n):
     cursor.execute("SELECT * FROM AdminChanges ORDER BY ID DESC")
     return cursor.fetchmany(n)
 
+def getEmpleadoFromIO(idEntrada):
+    cursor.execute(f'''SELECT EmployeeID FROM EmployeeIO WHERE ID="{idEntrada}"''')
+    return cursor.fetchone()
 
 def getAllCabinas():
     cursor.execute("SELECT DISTINCT(MAC) FROM estadosCabinas")
