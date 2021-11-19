@@ -92,7 +92,8 @@ def añadirEmpleado():
         else:
             createEmployee(first, last, email, phone, addr, zip, position)
             logAdminChange(session['username'], "Añadido empleado: " + first + " " + last)
-        
+            return redirect(url_for('empleado', idEmpleado = getEmployeeId(first, last) ) )
+            
     return render_template("añadirEmpleado.html", form = newEmployee)
 
 
