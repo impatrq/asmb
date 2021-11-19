@@ -5,13 +5,11 @@ from SQLFunctions import logEstadoCabina, logEmployeeIO
 
 HEADER = 16
 IP = "192.168.0.132"
-PORT = 9090
+PORT = 8080
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = '!DISCONNECT'
 ADDR = (IP, PORT)
 
-server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(ADDR)
 
 def handle_client(conn, addr):
 
@@ -35,6 +33,10 @@ def handle_client(conn, addr):
     conn.close()
 
 def server_init():
+    print("[STARTING SERVER]")
+    server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    server.bind(ADDR)
+    print("[SERVER STARTED]")
     server.listen(10)
     while True:
         conn, addr = server.accept()
