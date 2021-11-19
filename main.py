@@ -26,7 +26,7 @@ def index():
 
 @app.route("/dashboard")
 def dashboard():
-    adminName = "admin"
+    adminName = session['username']
     n = 100
     return render_template("index.html", entradas = getNInOut(n), entradasPrioritarias = getInOutFromWatchlist(adminName, n), empleadosVigilados = getEmployeesInWatchListFrom(adminName), cambiosAdmins = getAdminChanges(n))
     
@@ -162,5 +162,5 @@ def añadirCuenta():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    server_thread = threading.Thread(target=server_init)
-    server_thread.start()
+    #server_thread = threading.Thread(target=server_init)
+    #erver_thread.start()
