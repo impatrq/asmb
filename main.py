@@ -162,5 +162,5 @@ def añadirCuenta():
 
 if __name__ == "__main__":
     app.run(debug=True)
-    #server_thread = threading.Thread(target=server_init)
-    #erver_thread.start()
+    server_thread = threading.Thread(target=server_init)
+    server_thread.start()
