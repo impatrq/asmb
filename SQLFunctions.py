@@ -69,7 +69,7 @@ def getAllCabinas():
     return cursor.fetchall()
 
 def getEstadoCabina(mac):
-    cursor.execute(f'''SELECT * FROM estadosCabinas WHERE MAC="{mac}" ORDER BY Date DESC''')
+    cursor.execute(f'''SELECT * FROM estadosCabinas WHERE MAC="{mac}" ORDER BY Date DESC, Time DESC''')
     return cursor.fetchmany(1)
     
 def getAllEstadosCabinas():
