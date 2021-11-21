@@ -4,7 +4,7 @@ import json
 from SQLFunctions import logEstadoCabina, logEmployeeIO
 
 HEADER = 16
-IP = "192.168.0.132"
+IP = socket.gethostbyname(socket.gethostname())
 PORT = 8080
 FORMAT = 'utf-8'
 DISCONNECT_MESSAGE = '!DISCONNECT'
