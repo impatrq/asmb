@@ -2,8 +2,14 @@ import adafruit_mlx90614 as mlx90614
 import RPi.GPIO as GPIO
 import busio as io
 import board
+from imutils.video import VideoStream
+from Libs.DetectMask import detectMask
+from Libs.simpleRC522 import SimpleMFRC522
+from Libs.SQLFunctions import logSensors, logEmployee
+from Libs.DetectEyesMouth import detectClosedEyesAndMouth
+
 from time import sleep
-from SQLFunctions import logSensors
+
 
 enUso:bool = False
 enFuncionamiento:bool = True
@@ -55,7 +61,7 @@ class ASMB:
             '''Devuelve el estado del pin'''
             if self.__mode == 'input':
                 state = GPIO.input(self.__pin)
-                return state
+                return bool(state)
             raise Exception(f'Modo del pin {self.__pin}:{self.__mode}')
 
         def push(self, state):
@@ -121,8 +127,10 @@ class ASMB:
                     return True, temp 
                 sleep(0.25)
             return False, temp
+            
     class PanelEstado:
         def __init__(self, testPin, sh_cp, ds, st_cp, pinEntrada, pinAlcohol, pinSalida) -> None:
+            '''Constructor para el panel de estado'''
             self.testPin:ASMB.Pin = testPin
             self.sh_cp:ASMB.Pin = sh_cp
             self.ds:ASMB.Pin = ds
@@ -133,6 +141,7 @@ class ASMB:
             self.pinSalida:ASMB.Pin = pinSalida
             
         def logSensors(self, states:tuple) -> None:
+            '''Envia los estados de los sensores al panel de estado'''
             registerRefreshPin = self.sh_cp
             serialOut = self.ds
             outputRefreshPin = self.st_cp
@@ -140,19 +149,76 @@ class ASMB:
                 serialOut.setState(e)
                 registerRefreshPin.push(1)
             outputRefreshPin.push(1)
-            logSensors(states)
+            logSensors(states) # No, no se llama a si misma. Es una funcion de otro lugar
+
         def getSensorStatus(self,) -> list:
             estados = [False]*8
-            '''[temperatura, tarjetas, entrada, alcohol, salida, ]'''
+            '''[temperatura, tarjetas, entrada, alcohol, salida, ?, ?, cam]'''
             try:
                 i2c = io.I2C(board.SCL, board.SDA, frequency=100e3)
-                mlx = mlx90614.MLX90614(self.__i2c)
-            except:
+                mlx90614.MLX90614(i2c)
+                estados[0] = False
+            except:     # Poner la excepcion posta
                 estados[0] = True
 
             try:
-                # Poner lo mismo q arriba pero para el lector de tarjetas
-                pass
-            except:
+                SimpleMFRC522(busa=0, devicea=0)
+                estados[1] = False
+            except:     # Poner la excepcion posta
                 estados[1] = True
-            
+
+            estados[2] = self.pinEntrada.getState()
+            estados[3] = self.pinAlcohol.getState()
+            estados[4] = self.pinSalida.getState()
+
+            estados[5] = False      # Alto placeholder
+            estados[6] = False      # x2
+
+            try:
+                VideoStream(src=0).start().stop()
+                estados[0] = False
+            except:     # Poner la excepcion posta
+                estados[7] = True
+
+            return estados
+    
+    class DispenserAlcohol:
+        def __init__(self, pinSensor, pinMotor, tiempoDeActivacion):
+            '''Constructor del dispenser de alcohol'''
+            self.__timer = tiempoDeActivacion
+            self.__pinSensor:ASMB.Pin = pinSensor
+            self.__pinMotor:ASMB.Pin = pinMotor
+        def dispensar(self,):
+            self.__pinMotor.setState(1)
+            sleep(self.__timer)
+            self.__pinMotor.setState(0)
+        def verMano(self,):        # Revisar nombre 
+            while 1:                
+                if self.__pinSensor.getState():
+                    self.dispensar()
+                sleep(.1)
+
+    class LectorDeTarjetas:
+        def __init__(self, bus=0, device=0):
+            self.__reader = SimpleMFRC522(bus, device)
+        def readCard(self):
+            while 1:
+                id, text = self.__reader.read()
+                return id, text
+
+    class FaceDetection:
+        def __init__(self, mode:str='eyes&Mouth'):
+            '''
+                modes:
+                    - 'eyes&Mouth', detecta los ojos y boca cerrados por 3 segs
+                    - 'mask', detecta el uso de un barbijo por 3 segs
+            '''
+            self.__mode = mode
+        def detect(self):
+            if self.__mode=='eyes&Mouth':
+                detectClosedEyesAndMouth()
+            elif self.__mode=='mask':
+                detectMask()
+            else:
+                raise Exception("Los modos puede ser 'eyes&Mouth' || 'mask'")
+            return 
