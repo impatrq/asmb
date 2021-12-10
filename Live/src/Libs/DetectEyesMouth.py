@@ -32,18 +32,17 @@ maxConsecutiveFrames = 2
                                         
  
 
+detector = dlib.get_frontal_face_detector()                                
+predictor = dlib.shape_predictor("Libs/Recursos/shape_predictor_68_face_landmarks.dat")  
 
+leftStart, leftEnd = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"] 
+rightStart, rightEnd = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
+
+mouthStart, mouthEnd = face_utils.FACIAL_LANDMARKS_IDXS["mouth"] 
 
 
 
 def detectClosedEyesAndMouth():
-    detector = dlib.get_frontal_face_detector()                                
-    predictor = dlib.shape_predictor("Libs/Recursos/shape_predictor_68_face_landmarks.dat")  
-
-    leftStart, leftEnd = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"] 
-    rightStart, rightEnd = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
-
-    mouthStart, mouthEnd = face_utils.FACIAL_LANDMARKS_IDXS["mouth"] 
     videoSource = VideoStream(src=0).start() 
 
     print("Comenzó todo")
