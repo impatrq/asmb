@@ -1,1 +1,1 @@
-Codigo Para prueva de sensores 
+Codigo Para Prueba De Sensores 
