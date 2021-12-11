@@ -35,15 +35,16 @@ def logSensors(states):
 
 setupPines()
 #Variables globales para definir tiempos
-    a = 0
-    Entro = 0
-    TimaMiler = 0
-    Test = 10050
-    proxen = 1000
-    proxsa = 10000 
-    alcol = 100300
-    desinf = 5000000
-    panel = 500000
+#Declaro cada cuanto tiempo se repiten segun las necesidades de la cabina
+a = 0
+Entro = 0
+TimaMiler = 0
+Test = 10050
+proxen = 1000
+proxsa = 10000 
+alcol = 100300
+desinf = 5000000
+panel = 500000
 
 #Bucle Principal, cada N-tiempo realizo N-tarea
 while(1):
