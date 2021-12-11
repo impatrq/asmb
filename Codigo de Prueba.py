@@ -96,7 +96,9 @@ while(1):
             if(a <= 60):
                 #Activo dispenser
                 GPIO.output(10, 1)
+            #si se paso de tiempo
             else:
+                #Paro el dispenser
                 GPIO.output(10, 0)
         #si no tiene las manos
         if(not GPIO.input(18)):
