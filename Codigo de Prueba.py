@@ -17,14 +17,16 @@ def setupPines():
     GPIO.setup(11,GPIO.OUT)                             ##Motor Desinf
 
 def logSensors(states):
-            '''Envia los estados de los sensores al panel de estado'''
-            P=0
-            while(P<8):  
-                GPIO.output(27, states)  
-                GPIO.output(22, 1)
-                P=P+1
-                GPIO.output(22, 0)
-            GPIO.output(4, 1)
+    '''Envia los estados de los sensores al panel de estado'''
+    P=0
+    while(P<8):  
+        GPIO.output(27, states)  
+        GPIO.output(22, 1)
+        P=P+1
+        GPIO.output(22, 0)
+    GPIO.output(4, 1)
+
+
 setupPines()
 a=0
 Entro=0
