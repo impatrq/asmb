@@ -18,13 +18,18 @@ def setupPines():
 
 #Funcion para Envia los estados de los sensores al panel de estado
 def logSensors(states):
-
+    #declaro variable para bucle
     P = 0
-    while(P < 8):  
+    #inicio buble
+    while(P < 8):
+        #Cargo estado p   
         GPIO.output(27, states)  
         GPIO.output(22, 1)
+        #Aumento P
         P=P+1
+        #Bajo flag de carga
         GPIO.output(22, 0)
+    #subo estados cargados
     GPIO.output(4, 1)
 
 
