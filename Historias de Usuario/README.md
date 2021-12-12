@@ -1,5 +1,5 @@
-# Automatic-Sanitary-Modular-Booth
-Proyecto de 7mo Año de la Escuela EEST N7 TRQ
+# Historias de usuario para ASMB
+Nota: No todas las HU y reuniones diarias se encuentran aquí debido a un cambio de modalidad. Ver ramas y carpeta de campo, correspondientemente.
 
 ## Nomenclatura
 ### HUx01 - *Nombre*
