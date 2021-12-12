@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row px-3">
+        {% for mac, time, date, states in estados %}
+            <div class="card m-4 p-0" style="width: 250px;">
+                <div class="card-header bg-dark bg-opacity-75 bg-gradient text-white" style="border-radius: 20px 20px 0 0;">
+                    <h5 class="card-title m-2"><b>Cabina</b></h5>
+                </div>
+                <div class="card-body bg-secondary bg-opacity-75" style="border-radius: 0 0 20px 20px;">
+                    <p class="card-text"><b>MAC:</b> {{ mac }}</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text"><b>Dia:</b> {{ date }}</p>
+                            <p class="card-text"><b>Hora:</b> {{ time }}</p>
+                        </div>
+                        <div class="col">
+                            <a class="btn {{ 'btn-success' if not (states[0] or states[1] or states[2] or states[3] or states[4] or states[5] or states[6] or states[7] ) else 'btn-danger' }} m-3" href="{{ url_for('cabina', macCabina = mac) }}" style='position:absolute; bottom:0px; right:0px;'>
+                                Estado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

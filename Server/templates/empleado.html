@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="container-fluid">
+    {% for id, nombre, apellido, email, phoneNumber, address, zipCode, position in datosEmpleado %}
+    <div class="row-12 align-items-center justify-content-center mx-auto mb-0" style="height: 300px; width:900px;">
+        <div class="col bg-dark bg-opacity-100 text-white" style="border-radius: 10px;">
+            <div class="row">
+                <div class="col mx-3" style="margin-top:2%;">
+                    <h3 class="text-center bg-secondary p-2" style="border-radius: 10px;"><b>Tarjeta de empleado</b></h3>
+                    
+                    <h4>Nombre y Apellido: {{ nombre }}  {{ apellido }}</h4>
+                    <h4>Posicion: {{ position }}</h4>
+                    <h4>Id empleado: {{ id }}</h4>
+                    <h4>Email: <a href="mailto:{{ email }}">{{ email }}</a></h4> 
+                </div>
+                <div class="col my-4 align-middle" style="text-align: center;">
+                    <img src="{{ url_for('static', filename= 'photos/' + nombre + ' ' + apellido + '.png')  }}" style="height: 250px; border-radius: 20px">
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mx-auto mt-0">
+                <div class="col bg-dark text-white p-3" style="border-radius: 20px;">
+                    <h4>Nombre: {{ nombre }} {{ apellido }}</h4>
+                    <h4>Posición: {{ position }}</h4>
+                    <h4>Email: <a href="mailto:{{ email }}">{{ email }}</a></h4>
+                    <h4>Telefono: {{ phoneNumber }}</h4>
+                    <h4>Dirección: {{ address }}</h4>
+                    <h4>Código Postal: {{ zipCode }}</h4>
+                    <br>
+                    <div>
+                        <a class="btn bg-secondary text-white" href="{{ url_for('entradasRecientes', idEmpleado=id) }}">
+                            <b>Entradas Recientes</b>
+                        </a>
+                        <a class="btn bg-secondary text-white float-right" href="{{ url_for('añadirEmpleadoAWatchlist', idEmpleado=id) }}">
+                            <b>Agregar a watchlist</b>
+                        </a>
+                    </div>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}

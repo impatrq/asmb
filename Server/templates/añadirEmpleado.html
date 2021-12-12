@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="mx-auto" style="width:405px">
+        <form id="EmpleadoForm" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div>   
+                <div class="row">
+                    <div class="col">
+                        <h3>Nombre</h3>
+                        {{ form.Name() }}
+                    </div>
+                    <div class="col">
+                        <h3>Apellido</h3>
+                        {{ form.Surname() }}
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <h3>Email</h3>
+                    {{ form.Email(style="margin-left:3%; width:403px") }}
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h3>Telefono</h3>
+                        {{ form.PhoneNumber() }}
+                    </div>
+                    <div class="col">
+                        <h3>Dirección</h3>
+                        {{ form.Address() }}
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <h3>Código Postal</h3>
+                        {{ form.ZipCode() }}
+                    </div>
+                    <div class="col">
+                        <h3>Posición</h3>
+                        {{ form.Position() }}
+                    </div>
+                </div>
+
+                <button class="mt-4" type="submit">Registrar Empleado</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

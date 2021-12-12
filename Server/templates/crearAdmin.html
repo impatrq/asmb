@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="mx-auto" style="width:405px">
+        <form id="EmpleadoForm" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div>   
+                <div class="row">
+                    <div class="col">
+                        <h3>Nombre</h3>
+                        {{ form.username() }}
+                    </div>
+                    <div class="col">
+                        <h3>Apellido</h3>
+                        {{ form.passw() }}
+                    </div>
+                </div>
+                <button class="mt-4" type="submit">Registrar Administrador</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
