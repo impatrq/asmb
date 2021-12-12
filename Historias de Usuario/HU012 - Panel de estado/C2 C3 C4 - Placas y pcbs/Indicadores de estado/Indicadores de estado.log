@@ -1,0 +1,10 @@
+# Writing all output to: C:\Users\Juan I. Casareski\Desktop\Proyecto\HU012 - Panel de estado\Placas y pcbs\Indicadores de estado\Indicadores de estado.log
+set pad_wire_necking on
+bus diagonal
+fanout 20
+route 100
+clean 10
+filter 5
+recorner diagonal
+status_file
+
