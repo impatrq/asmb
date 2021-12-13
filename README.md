@@ -40,7 +40,7 @@ Agustín Murgia: Estructura
 
 Juan I. Casareski: [juani.casareski@gmail.com](mailto:juani.casareski@gmail.com)
 
-Marco F. Cuccaro: []()
+Marco F. Cuccaro: [cuccaromarco13@gmail.com](mailto:cuccaromarco13@gmail.com)
 
 Iván Torres: [rantaproivo@gmail.com](mailto:rantaproivo@gmail.com)
 
