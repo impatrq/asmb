@@ -21,7 +21,7 @@ ASMB es una cabina modular de desinfección automatica. El fin de esta es asegur
 <b>2do puesto en prototipos II en Las olimpiadas nacionales ONIET</b>
 
 ![Certificado prototipos II](https://i.imgur.com/SJS4VX8.jpg)
-
+(Certificado emitido por cada integrante)
 <br>
 
 ## Desarollo
