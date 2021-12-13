@@ -22,6 +22,7 @@ ASMB es una cabina modular de desinfección automatica. El fin de esta es asegur
 
 ![Certificado prototipos II](https://i.imgur.com/SJS4VX8.jpg)
 Nota: Certificado emitido por cada integrante
+
 <br>
 
 ## Desarollo
