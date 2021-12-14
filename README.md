@@ -21,14 +21,11 @@ Para explicación de funcionamiento en detalle, consultar el [Manual de Usuario]
 ## Reconocimientos
 <b>2do puesto en prototipos II en Las olimpiadas nacionales ONIET</b>
 
-![Certificado prototipos II](https://i.imgur.com/SJS4VX8.jpg)
-Nota: Certificado emitido por cada integrante
-
 <br>
 
 ## Desarollo
 
-Juan I. Casareski: Programa
+Juan I. Casareski: Software
 
 Marco F. Cuccaro: Electronica
 
