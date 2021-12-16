@@ -3,7 +3,9 @@
 <font size="3">
  Estos son los circuitos que van a encontrar en esta seccion:
 
-<font size="4">Circuito del dispenser:
+<font size="4">
+
+[Circuito del dispenser:](https://github.com/impatrq/asmb/blob/main/Recursos/Circuitos/Dispenser%20de%20alcohol/Dispenser%20de%20alcohol%20en%20gel.pdsprj)
 
 ![](https://i.ibb.co/TtYXD9d/Circuito-dispenser.jpg)
 
