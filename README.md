@@ -3,7 +3,7 @@
 ## ¿Que es ASMB?
 
 ASMB es una cabina modular de desinfección automatica. El fin de esta es asegurar que un usuario se desinfecte antes de entrar en un espacio establecido, ademas de registrar su asistencia, temperatura y uso de barbijo.
-Para explicación de funcionamiento en detalle, consultar el [Manual de Usuario](https://github.com/impatrq/asmb/blob/main/Docs/Carpeta%20tecnica.docx)
+Para explicación de funcionamiento en detalle, consultar el [Manual de Usuario](https://github.com/impatrq/asmb/blob/main/Docs/Carpeta%20técnica.docx)
 
 <br>
 
