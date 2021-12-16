@@ -88,13 +88,13 @@ La cabina está diseñada para ser montada en un espacio abierto antes del acces
 
 1.4 **Diagrama en bloques**
 
-![](Imagenes/diagramaBloque1.png)
+![](Imagenes/DiagramaBloque1.png)
 
-![](Imagenes/diagramaBloque2.png)
+![](Imagenes/DiagramaBloque2.png)
 
 1.5 **Diagrama de Gantt**
 
-![](Imagenes/diagramaGantt.png)
+![](Imagenes/DiagramaGantt.png)
 
 2. **Componentes**
 
