@@ -15,6 +15,6 @@
 
 ![](https://i.ibb.co/ph4bmdH/Lector.jpg)
 
-[Sensor de temperatura:](https://github.com/impatrq/asmb/tree/main/Recursos/Modelos/Sensor%20de%20temperatura)
+[Sensor de temperatura:](https://github.com/impatrq/asmb/blob/main/Recursos/Modelos/Sensor%20de%20temperatura/Sensor%20de%20temperatura.dwg)
 
 ![](https://i.ibb.co/rtttwMG/Sensor-de-temp.jpg)
