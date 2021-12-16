@@ -17,7 +17,7 @@
 
 ![](https://i.ibb.co/8rypNS6/Foto-ciruito-mother.jpg)
 
-Circuito del panel de estado:
+[Circuito del panel de estado:](https://github.com/impatrq/asmb/blob/main/Recursos/Circuitos/Panel%20de%20estado/Panel%20de%20estado.pdsprj)
 
 ![](https://i.ibb.co/fkS782V/Foto-circuito-panel.jpg)
 
