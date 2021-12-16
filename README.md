@@ -26,6 +26,8 @@ Para explicación de funcionamiento en detalle, consultar el [Manual de Usuario]
 - [Historias de usuario](https://github.com/impatrq/asmb/tree/main/Historias%20de%20Usuario)
 
 - [Live](https://github.com/impatrq/asmb/tree/main/Live)
+
+- [Recursos](https://github.com/impatrq/asmb/tree/main/Recursos)
 ## Reconocimientos
 <b>2do puesto en prototipos II en Las olimpiadas nacionales ONIET</b>
 
