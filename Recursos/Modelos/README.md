@@ -1,4 +1,5 @@
-Modelo de la Cabina:
+
+[Modelo de la cabina:](https://github.com/impatrq/asmb/blob/main/Recursos/Modelos/Cabina%20general/Modelo%20Cabina.dwg)
 
 ![](https://i.ibb.co/sHWFJ5x/Modelo-Cabina-General.jpg)
 
