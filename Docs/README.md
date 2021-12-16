@@ -250,6 +250,7 @@ Este panel recibe el estado de todos los sensores desde el microprocesador y lo 
 ![](Imagenes/esquematico2.png)
 
 ![](Imagenes/pcb2.png)
+
 4.3 **Level shifters**
 
 Este circuito es el encargado de adaptar los niveles lógicos de los sensores de efecto hall y de los sensores de proximidad y reflexión. Los anteriores nombrados usan 5v para representar un 1 lógico, este circuito es el encargado de convertir estos 5v a 3v3, mediante un diodo Zener.
