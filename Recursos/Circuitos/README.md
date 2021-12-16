@@ -4,6 +4,7 @@ Circuito del dispenser:
 ![](https://i.ibb.co/TtYXD9d/Circuito-dispenser.jpg)
 
 Circuito del lector de tarjetas:
+
 ![](https://i.ibb.co/CwmM3Rb/Foto-cirucito-lector.jpg)
 
 Circuito de la mother:
