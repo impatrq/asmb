@@ -28,6 +28,10 @@ Para explicación de funcionamiento en detalle, consultar el [Manual de Usuario]
 - [Live](https://github.com/impatrq/asmb/tree/main/Live)
 
 - [Recursos](https://github.com/impatrq/asmb/tree/main/Recursos)
+
+- [Server](https://github.com/impatrq/asmb/tree/main/Server)
+
+
 ## Reconocimientos
 <b>2do puesto en prototipos II en Las olimpiadas nacionales ONIET</b>
 
