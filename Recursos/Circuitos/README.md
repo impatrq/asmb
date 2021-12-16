@@ -13,7 +13,7 @@
 
 ![](https://i.ibb.co/CwmM3Rb/Foto-cirucito-lector.jpg)
 
-Circuito de la mother:
+[Circuito de la mother:](https://github.com/impatrq/asmb/blob/main/Recursos/Circuitos/Mother/Mother.pdsprj)
 
 ![](https://i.ibb.co/8rypNS6/Foto-ciruito-mother.jpg)
 
