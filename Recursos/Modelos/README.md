@@ -3,7 +3,7 @@
 
 ![](https://i.ibb.co/sHWFJ5x/Modelo-Cabina-General.jpg)
 
-Modelo del cartel de ocupado:
+[Modelo del cartel de ocupado:](https://github.com/impatrq/asmb/blob/main/Recursos/Modelos/Cartel%20ocupado/Cartel%20Ocupado.dwg)
 
 ![](https://i.ibb.co/G79yKVX/Cartel-Ocupado.jpg)
 
