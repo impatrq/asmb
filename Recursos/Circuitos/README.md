@@ -9,7 +9,7 @@
 
 ![](https://i.ibb.co/TtYXD9d/Circuito-dispenser.jpg)
 
-Circuito del lector de tarjetas:
+[Circuito del lector de tarjetas:](https://github.com/impatrq/asmb/blob/main/Recursos/Circuitos/Lector%20de%20tarjetas/Lector%20de%20tarjetas.pdsprj)
 
 ![](https://i.ibb.co/CwmM3Rb/Foto-cirucito-lector.jpg)
 
