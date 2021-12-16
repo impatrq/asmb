@@ -21,6 +21,6 @@
 
 ![](https://i.ibb.co/fkS782V/Foto-circuito-panel.jpg)
 
-Circuito de los sensores de proximidad:
+[Circuito de los sensores de proximidad:](https://github.com/impatrq/asmb/blob/main/Recursos/Circuitos/Proximity%20sensors/Level%20adapter.pdsprj)
 
 ![](https://i.ibb.co/HxpFCLf/Foto-circuito-Level.jpg)
