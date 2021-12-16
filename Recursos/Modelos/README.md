@@ -7,14 +7,14 @@
 
 ![](https://i.ibb.co/G79yKVX/Cartel-Ocupado.jpg)
 
-Dispenser de alcohol:
+[Dispenser de alcohol:](https://github.com/impatrq/asmb/blob/main/Recursos/Modelos/Dispenser%20de%20alcohol%20en%20gel/Dispenser%20de%20alcohol%20en%20gel.dwg)
 
 ![](https://i.ibb.co/d7BJNtk/Dispenser.jpg)
 
-Lector de tarjetas:
+[Lector de tarjetas:](https://github.com/impatrq/asmb/blob/main/Recursos/Modelos/Dispenser%20de%20alcohol%20en%20gel/Dispenser%20de%20alcohol%20en%20gel.dwg)
 
 ![](https://i.ibb.co/ph4bmdH/Lector.jpg)
 
-Sensor de temperaturas:
+[Sensor de temperatura:](https://github.com/impatrq/asmb/tree/main/Recursos/Modelos/Sensor%20de%20temperatura)
 
 ![](https://i.ibb.co/rtttwMG/Sensor-de-temp.jpg)
