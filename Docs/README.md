@@ -147,7 +147,7 @@ Esta fue ideada para la fácil reimplementación de los pines del sistema una si
 
 Este sería el uso deseado de la clase <Temperatura>
 
-![](Imagenes/tempSenseCode.png)
+![](Imagenes/TempSenseCode.png)
 
 El método <readTemp> devuelve dos valores, el primero hace referencia a si la persona está habilitada a entrar, siendo 'True' si se encuentra en el rango de temperatura permitido y 'False' si no se encuentra en dicho rango, el segundo valor es la temperatura leída.
 
