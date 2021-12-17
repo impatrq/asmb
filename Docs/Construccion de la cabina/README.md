@@ -62,3 +62,6 @@ Luego de esto nos dimos cuenta que el panel de estado necesitaria diferentes niv
 Esto nos llevo a diseñar unas pequeñas ventanas para luego soldar caños cuadrados en U que servirian de soporte para una plancha donde iria la electronica, estas ventanas fueron cortadas con sierra y moladora.
 
 ![](Fotos/PanelEstadoEstantes.jpg)
+
+Una vez terminado notamos que entraban a presion y quedaban bien sujetas, teniendo en cuenta el peso que tendria que soportar los estantes y las dificultades ambientales que podria experimentar (vibraciones, vientos fuertes, inclinaciones, etc), determinamos que era suficiente y no necesitaba soldar.
+Luego colocamos las planchas, el material elegido fue el carton.
