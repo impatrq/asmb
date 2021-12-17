@@ -85,3 +85,5 @@ Para el lado de la pared tuvimos que sacar una de las placas, cortar para hacer 
 De este ultimo llegamos a la bomba de agua, la cual esta conectado al tanque y se encarga de bombear el liquido sanitizante, estos estan unido mediante adaptadores de rosca, y en el caso del tanque mediante un tapon hecho a base de cinta y sellador.
 
 ![](Fotos/bombaAgua.jpg)
+
+![](Fotos/bombaTanque.jpg)
