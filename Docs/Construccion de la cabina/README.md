@@ -48,3 +48,7 @@ Primera medimos y cortamos con la moladora, agujereamos y remachamos unos con ot
 
 ![](Fotos/PanelCorte.jpg)
 >Ignorar las exageradas medidas de seguridad
+
+Por ultimo la remachamos la base y finalizamos la estructura de la cabina
+
+![](Fotos/CabinaCompleta.jpg)
