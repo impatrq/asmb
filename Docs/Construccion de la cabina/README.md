@@ -10,3 +10,7 @@ Los materiales usados para la construccion de la cabina fueron reciclados de pro
 Todo este marco fue cortado utilizando una moladora
 
 ![](https://us.123rf.com/450wm/aoosthuizen/aoosthuizen1705/aoosthuizen170500036/78086985-amoladora-de-%C3%A1ngulo-de-corte-de-un-tubo-cuadrado-de-metal-haciendo-una-lluvia-de-chispas.jpg?ver=6)
+
+Y una vez cortado en partes mas trasnportables los llevamos a aeronautica para cortarlos de forma mas precisa con la moladora de banco
+
+![](https://http2.mlstatic.com/D_NQ_NP_710970-MLA28048862486_082018-O.webp)
