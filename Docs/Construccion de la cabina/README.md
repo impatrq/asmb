@@ -29,3 +29,12 @@ Estas no eran resistentes y se terminaron rompiendo, esto nos llevo a realizar p
 
 ![](Fotos/EjemploSoldadura1.jpg)
 ![](Fotos/EjemploSoldadura2.jpg)
+
+Ya con estas practicas, las soldaduras posteriores se realizaron adecuadamente y eran resistentes, lo siguiente a realizar fue rebajarlas para emprolijarlas al resto de los perfiles
+
+![](Fotos/SoldaduraBienHechas.jpg)
+
+![](Fotos/SoldaduraProlija2.jpg)
+
+![](Fotos/SoldaduraProlija.jpg)![](Fotos/SoldaduraProlija3.jpg)
+
