@@ -19,3 +19,8 @@ Luego se emprolijaron los bordes utilizando la moladora con discos flappers
 
 ![](https://http2.mlstatic.com/D_NQ_NP_720274-MLA41361114142_042020-V.jpg)
 
+Una vez emprolijadas las superficies pasamos soldar, proceso el cual al principio fue complicado porque ninguno sabia como soldar. De todas formas dimos nuestro mejor intento y conseguimos lo siguiente
+
+![](Fotos/FotoSoldadura1.jpg)
+![](Fotos/FotoSoldadura2.jpg)
+![](Fotos/FotoSoldadura3.jpg)
