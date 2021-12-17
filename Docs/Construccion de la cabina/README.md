@@ -52,3 +52,7 @@ Primera medimos y cortamos con la moladora, agujereamos y remachamos unos con ot
 Por ultimo la remachamos la base y finalizamos la estructura de la cabina
 
 ![](Fotos/CabinaCompleta.jpg)
+
+La siguien etapa de la construccion fue la colocacion de los paneles y perfiles de pvc a modo de pared los cuales fueron cortados con cierra, con moladora, emprolijados con un dremel con una herramienta de piedra de devaste y unidos a la estructura encastrandose unos con otros y luego en los bordes J, estos ultimos amurados con remaches a la cabina
+
+![](Fotos/CabinaPared1.jpg)
