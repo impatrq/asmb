@@ -64,4 +64,6 @@ Esto nos llevo a diseñar unas pequeñas ventanas para luego soldar caños cuadr
 ![](Fotos/PanelEstadoEstantes.jpg)
 
 Una vez terminado notamos que entraban a presion y quedaban bien sujetas, teniendo en cuenta el peso que tendria que soportar los estantes y las dificultades ambientales que podria experimentar (vibraciones, vientos fuertes, inclinaciones, etc), determinamos que era suficiente y no necesitaba soldar.
-Luego colocamos las planchas, el material elegido fue el carton.
+Luego colocamos las planchas, el material elegido fue el carton. Realizamos algunos agujeros y pasamos los cables
+
+![](Fotos/222324.jpg)
