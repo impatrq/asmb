@@ -24,3 +24,8 @@ Una vez emprolijadas las superficies pasamos soldar, proceso el cual al principi
 ![](Fotos/FotoSoldadura1.jpg)
 ![](Fotos/FotoSoldadura2.jpg)
 ![](Fotos/FotoSoldadura3.jpg)
+
+Estas no eran resistentes y se terminaron rompiendo, esto nos llevo a realizar practicas de soldadura con la ayuda las indicaciones de los profesore. A continuacion un ejemplo:
+
+![](Fotos/EjemploSoldadura1.jpg)
+![](Fotos/EjemploSoldadura2.jpg)
