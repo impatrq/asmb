@@ -56,3 +56,9 @@ Por ultimo la remachamos la base y finalizamos la estructura de la cabina
 La siguien etapa de la construccion fue la colocacion de los paneles y perfiles de pvc a modo de pared los cuales fueron cortados con cierra, con moladora, emprolijados con un dremel con una herramienta de piedra de devaste y unidos a la estructura encastrandose unos con otros y luego en los bordes J, estos ultimos amurados con remaches a la cabina
 
 ![](Fotos/CabinaPared1.jpg)
+
+Luego de esto nos dimos cuenta que el panel de estado necesitaria diferentes niveles para colocar la electronica, en total tres, uno para la bomba de agua y su tanque, y otras dos para la electronica. 
+
+Esto nos llevo a diseñar unas pequeñas ventanas para luego soldar caños cuadrados en U que servirian de soporte para una plancha donde iria la electronica, estas ventanas fueron cortadas con sierra y moladora.
+
+![](Fotos/PanelEstadoEstantes.jpg)
