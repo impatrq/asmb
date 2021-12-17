@@ -77,3 +77,7 @@ Luego realizamos perforacion, en total 6, sobre la extencion de los caños para 
 
 ![](Fotos/Caño1.jpg)
 ![](Fotos/Caño2.jpg)
+
+Para el lado de la pared tuvimos que sacar una de las placas, cortar para hacer una ventana para los caños, colocarla denuevo y recien alli, pasar los caños
+
+![](Fotos/CañoPared.jpg)
