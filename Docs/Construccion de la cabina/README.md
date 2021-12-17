@@ -14,3 +14,8 @@ Todo este marco fue cortado utilizando una moladora
 Y una vez cortado en partes mas trasnportables los llevamos a aeronautica para cortarlos de forma mas precisa con la moladora de banco
 
 ![](https://http2.mlstatic.com/D_NQ_NP_710970-MLA28048862486_082018-O.webp)
+
+Luego se emprolijaron los bordes utilizando la moladora con discos flappers
+
+![](https://http2.mlstatic.com/D_NQ_NP_720274-MLA41361114142_042020-V.jpg)
+
