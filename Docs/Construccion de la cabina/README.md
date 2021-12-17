@@ -67,3 +67,7 @@ Una vez terminado notamos que entraban a presion y quedaban bien sujetas, tenien
 Luego colocamos las planchas, el material elegido fue el carton. Realizamos algunos agujeros y pasamos los cables
 
 ![](Fotos/222324.jpg)
+
+Luego pusimos manos a la obra y pintamos la cabina con pintura antioxidante blanca, fueron exactamente 3 capas de pintura.
+
+![](Fotos/CabinaPintada.jpg)
