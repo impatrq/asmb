@@ -71,3 +71,9 @@ Luego colocamos las planchas, el material elegido fue el carton. Realizamos algu
 Luego pusimos manos a la obra y pintamos la cabina con pintura antioxidante blanca, fueron exactamente 3 capas de pintura.
 
 ![](Fotos/CabinaPintada.jpg)
+
+En esta foto tambien podemos ver el sistema de desinfeccion acoplado en la cabina, ese se construyo utilizando tubos de termofusion de agua (de 1/2), 3 uniones de codo, un tapon, 6 aspersores, la bomba de agua, tanque de liquido desinfectante y sus adaptadores y conectores. los caños y las uniones las teniamos planeado unir con termofusora, pero debido a un problema con esta (y el hecho de que necesitabamos terminarla) decidimos unirlas a presion y utilizar sellador para cerrar posibles fugas.
+Luego realizamos perforacion, en total 6, sobre la extencion de los caños para ubicar los aspersores, estos tambien fueron unidos a presion y con sellador.
+
+![](Fotos/Caño1.jpg)
+![](Fotos/Caño2.jpg)
