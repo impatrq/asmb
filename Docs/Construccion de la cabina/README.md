@@ -87,3 +87,7 @@ De este ultimo llegamos a la bomba de agua, la cual esta conectado al tanque y s
 ![](Fotos/bombaAgua.jpg)
 
 ![](Fotos/bombaTanque.jpg)
+
+Con esto ultimo dariamos por finalizada la documentacion del proceso de construccion de la cabina, muchas gracias por leer. Una ultima foto de la cabina:
+
+![](Fotos/CabinaFinal.jpg)
