@@ -38,3 +38,5 @@ Ya con estas practicas, las soldaduras posteriores se realizaron adecuadamente y
 
 ![](Fotos/SoldaduraProlija.jpg)![](Fotos/SoldaduraProlija3.jpg)
 
+En este punto se dio por finalizada la construccion de la base de la cabina y se procedio a construir el panel de estado, en este utilizamos tambien materiales reciclados, entre los que se incluyen perfiles en U cuadrados; de tamaño grande y chico; y muchos remaches
+
